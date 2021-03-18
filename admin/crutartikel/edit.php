@@ -71,7 +71,7 @@ error_reporting(0);
 		$tanggal		= $_POST['tanggal'];
 		$judul			= $_POST['judul'];
 		$deskripsi      = $_POST['deskripsi'];
-		$gambar		= $_FILES['gambar']["name"];
+		$gambar			= $_FILES['gambar']["name"];
 
 
 		$sql = mysqli_query($koneksidb, "UPDATE artikel SET tanggal='$tanggal', judul='$judul', deskripsi='$deskripsi' , gambar='$gambar' WHERE id='$id'") or die(mysqli_error($koneksidb));

@@ -29,9 +29,9 @@ if (isset($_POST['submit'])) {
 		die();
 	}
 	$id			= $_POST['id'];
-	$tanggal			= $_POST['tanggal'];
-	$judul	    	= $_POST['judul'];
-	$deskripsi   	= $_POST['deskripsi'];
+	$tanggal	= $_POST['tanggal'];
+	$judul	   	= $_POST['judul'];
+	$deskripsi 	= $_POST['deskripsi'];
 	$gambar		= $_FILES["gambar"]["name"]; // ini cara mengambil nama filenya gais untuk dimasukan ke db gais
 
 	$cek = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
