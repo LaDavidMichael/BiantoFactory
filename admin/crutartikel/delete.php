@@ -14,7 +14,7 @@ if(isset($_GET['id'])){
 	// ini untuk "fetch" data dari db gais
 	// jadi bisa diambil pake arah panah (->)
 	$data = mysqli_fetch_object($cek);
-	$path = getcwd()."/../assets/images/".$data->gambar;
+	$path = getcwd()."/../assets/images/artikel/".$data->fotosampul;
 
 	unlink($path); // ini proses delete file nya gais
 
@@ -23,15 +23,15 @@ if(isset($_GET['id'])){
 		//query ke database DELETE untuk menghapus data dengan kondisi id=$id
 		$del = mysqli_query($koneksidb, "DELETE FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
 		if($del){
-			echo '<script>alert("Berhasil menghapus data."); document.location="../dashboard.php?page=tampildata";</script>';
+			echo '<script>alert("Berhasil menghapus data."); document.location="../dashboard.php?page=tampilartikel";</script>';
 		}else{
-			echo '<script>alert("Gagal menghapus data."); document.location="dashboard.php?page=tampildata";</script>';
+			echo '<script>alert("Gagal menghapus data."); document.location="dashboard.php?page=tampilartikel";</script>';
 		}
 	}else{
-		echo '<script>alert("ID tidak ditemukan di database."); document.location="dashboard.php?page=tampildata";</script>';
+		echo '<script>alert("ID tidak ditemukan di database."); document.location="dashboard.php?page=tampilartikel";</script>';
 	}
 }else{
-	echo '<script>alert("ID tidak ditemukan di database."); document.location="dashboard.php?page=tampildata";</script>';
+	echo '<script>alert("ID tidak ditemukan di database."); document.location="dashboard.php?page=tampilartikel";</script>';
 }
 
 ?>

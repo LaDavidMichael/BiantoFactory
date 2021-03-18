@@ -69,7 +69,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                   </li>
 
                   <li class="">
-                    <a href="dashboard.php?page=tampildata">
+                    <a href="dashboard.php?page=tampilartikel">
                       <i class="fa fa-newspaper-o" aria-hidden="true"></i> Artikel
                       <span class="fa fa-chevron"></span>
                     </a>
@@ -158,10 +158,10 @@ if (strlen($_SESSION['alogin']) == 0) {
           switch ($queries['page']) {
 
               // CRUD-Artikel
-            case 'tampildata':
+            case 'tampilartikel':
               include 'crutartikel/tampil.php';
               break;
-            case 'tambahdata':
+            case 'tambahartikel':
               include 'crutartikel/tambah.php';
               break;
             case 'editartikel':

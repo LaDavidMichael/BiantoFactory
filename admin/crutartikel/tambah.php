@@ -5,12 +5,13 @@ error_reporting(0);
 ?>
 
 <center>
-	<font size="6">Tambah Data</font>
+	<font size="6">Tambah Artikel</font>
 </center>
 <hr>
 <?php
 if (isset($_POST['submit'])) {
-	$target_dir = "assets/images/";
+
+	$target_dir = "assets/images/artikel/";
 	$target_file = $target_dir . basename($_FILES["gambar"]["name"]);
 
 	/**
@@ -28,17 +29,19 @@ if (isset($_POST['submit'])) {
 		die();
 	}
 	$id			= $_POST['id'];
-	$judul		= $_POST['judul'];
-	$deskripsi	= $_POST['deskripsi'];
-	$gambar		= $_FILES["gambar"]["name"];
+	$tanggal			= $_POST['tanggal'];
+	$judul	    	= $_POST['judul'];
+	$deskripsi   	= $_POST['deskripsi'];
+	$gambar		= $_FILES["gambar"]["name"]; // ini cara mengambil nama filenya gais untuk dimasukan ke db gais
 
 	$cek = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO artikel(id, judul, deskripsi, gambar) VALUES('$id', '$judul', '$deskripsi', '$gambar')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO artikel(id, tanggal, judul, deskripsi, gambar) 
+		VALUES('$id', '$tanggal' ,'$judul', '$deskripsi' , '$gambar')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
-			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampildata";</script>';
+			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilartikel";</script>';
 		} else {
 			echo '<div class="alert alert-warning">Gagal melakukan proses tambah data.</div>';
 		}
@@ -48,13 +51,23 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<form action="dashboard.php?page=tambahdata" method="post" method="post" enctype="multipart/form-data">
+<form action="dashboard.php?page=tambahartikel" method="post" enctype="multipart/form-data">
+
+
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Tanggal</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="date" name="tanggal" class="form-control" required>
+		</div>
+	</div>
+
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
 		<div class="col-md-6 col-sm-6">
 			<input type="text" name="judul" class="form-control" required>
 		</div>
 	</div>
+
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 		<div class="col-md-6 col-sm-6">
@@ -62,12 +75,14 @@ if (isset($_POST['submit'])) {
 			<textarea name="deskripsi" class="form-control"></textarea>
 		</div>
 	</div>
+
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="file" name="gambar" class="form-control" required>
+			<input type="file" name="fotosampul" class="form-control" required>
 		</div>
 	</div>
+
 	<div class="item form-group">
 		<div class="col-md-6 col-sm-6 offset-md-3">
 			<input type="submit" name="submit" class="btn btn-primary" value="Simpan">

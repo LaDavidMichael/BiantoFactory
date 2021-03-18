@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 	 * dengan perintah die() itu gais
 	 */
 	if (!$upload) {
-		print_r([$upload, $_FILES["forosampul"]["error"]]);
+		print_r([$upload, $_FILES["fotosampul"]["error"]]);
 
 		die();
 	}
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-<form action="dashboard.php?page=tambahtesti" method="post" enctype="multipart/form-data">>
+<form action="dashboard.php?page=tambahtesti" method="post" enctype="multipart/form-data">
     <div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Foto Sampul</label>
 		<div class="col-md-6 col-sm-6">
