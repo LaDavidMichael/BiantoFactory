@@ -5,107 +5,81 @@ error_reporting(0);
 ?>
 
 
-	<div class="container" style="margin-top:20px">
-		<center><font size="6">Edit Data</font></center>
+<div class="container" style="margin-top:20px">
+	<center>
+		<font size="6">Edit Data</font>
+	</center>
 
-		<hr>
+	<hr>
 
-		<?php
-		//jika sudah mendapatkan parameter GET id dari URL
-		if(isset($_GET['id'])){
-			//membuat variabel $id untuk menyimpan id dari GET id di URL
-			$id = $_GET['id'];
+	<?php
+	//jika sudah mendapatkan parameter GET id dari URL
+	if (isset($_GET['id'])) {
+		//membuat variabel $id untuk menyimpan id dari GET id di URL
+		$id = $_GET['id'];
 
-			//query ke database SELECT tabel artikel berdasarkan id = $id
-			$select = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
+		//query ke database SELECT tabel artikel berdasarkan id = $id
+		$select = mysqli_query($koneksidb, "SELECT * FROM vis WHERE id='$id'") or die(mysqli_error($koneksidb));
 
-			//jika hasil query = 0 maka muncul pesan error
-			if(mysqli_num_rows($select) == 0){
-				echo '<div class="alert alert-warning">ID tidak ada dalam database.</div>';
-				exit();
+		//jika hasil query = 0 maka muncul pesan error
+		if (mysqli_num_rows($select) == 0) {
+			echo '<div class="alert alert-warning">ID tidak ada dalam database.</div>';
+			exit();
 			//jika hasil query > 0
-			}else{
-				//membuat variabel $data dan menyimpan data row dari query
-				$data = mysqli_fetch_assoc($select);
-			}
+		} else {
+			//membuat variabel $data dan menyimpan data row dari query
+			$data = mysqli_fetch_assoc($select);
 		}
-		?>
+	}
+	?>
 
-		<?php
-		//jika tombol simpan di tekan/klik
-		if(isset($_POST['submit'])){
+	<?php
+	//jika tombol simpan di tekan/klik
+	if (isset($_POST['submit'])) {
 
-			$id = $_POST['id'];
+		$id = $_POST['id'];
 
-			//query ke database SELECT tabel artikel berdasarkan id = $id
-			$query = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
+		//query ke database SELECT tabel artikel berdasarkan id = $id
+		$query = mysqli_query($koneksidb, "SELECT * FROM visi WHERE id='$id'") or die(mysqli_error($koneksidb));
 
-			// ini untuk "fetch" data dari db gais
-			// jadi bisa diambil pake arah panah (->)
-			$data = mysqli_fetch_object($query);
-			$path = getcwd()."/assets/images/".$data->gambar;
+		// ini untuk "fetch" data dari db gais
+		// jadi bisa diambil pake arah panah (->)
+		$data = mysqli_fetch_object($query);
 
-			unlink($path); // ini proses delete file nya gais
 
-			$target_dir = "assets/images/";
-			$target_file = $target_dir . basename($_FILES["gambar"]["name"]);
+		unlink($path); // ini proses delete file nya gais
 
-			/**
-			 * ini untuk upload filenya gais
-			 */
-			$upload = move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file);
 
-			/**
-			 * jika file nya gagal di upload gas, maka dia berhenti gais
-			 * dengan perintah die() itu gais
-			 */
-			if (!$upload) {
-				print_r([$upload, $_FILES["gambar"]["error"]]);
+		$visi	= $_POST['visi'];
 
-				die();
-			}
-			$judul		= $_POST['judul'];
-			$deskripsi	= $_POST['deskripsi'];
-			$gambar	    = $_FILES['gambar']["name"];
+		$sql = mysqli_query($koneksidb, "UPDATE visi SET misi='$visi' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
-			$sql = mysqli_query($koneksidb, "UPDATE artikel SET judul='$judul', deskripsi='$deskripsi', gambar='$gambar' WHERE id='$id'") or die(mysqli_error($koneksidb));
-
-			if($sql){
-				echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampildata";</script>';
-			}else{
-				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
-			}
+		if ($sql) {
+			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilvisi";</script>';
+		} else {
+			echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 		}
+	}
 
 
-		?>
+	?>
 
-		<form action="dashboard.php?page=editartikel&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-			<div class="item form-group">
-				<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
-				<div class="col-md-6 col-sm-6">
-					<input type="text" name="judul" class="form-control" value="<?php echo $data['judul']; ?>" required>
-				</div>
+	<form action="dashboard.php?page=editvisi&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">visi</label>
+			<div class="col-md-6 col-sm-6">
+				<input type="text" name="misi" class="form-control" value="<?php echo $data['visi']; ?>" required>
 			</div>
-			<div class="item form-group">
-				<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
-				<div class="col-md-6 col-sm-6">
-					<!-- <input type="text" name="deskripsi" class="form-control"  required> -->
-					<textarea name="deskripsi" class="form-control" value="<?php echo $data['deskripsi']; ?>"></textarea>
-				</div>
+		</div>
+
+
+		<div class="item form-group">
+			<div class="col-md-6 col-sm-6 offset-md-3">
+				<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
+				<a href="dashboard.php?page=tampilvisi" class="btn btn-warning">Kembali</a>
 			</div>
-			<div class="item form-group">
-				<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
-				<div class="col-md-6 col-sm-6">
-					<input type="file" name="gambar" class="form-control" value="<?php echo $data['gambar']; ?>" required>
-				</div>
-			</div>
-			<div class="item form-group">
-				<div class="col-md-6 col-sm-6 offset-md-3">
-					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="dashboard.php?page=tampildata" class="btn btn-warning">Kembali</a>
-				</div>
-			</div>
-		</form>
-	</div>
+		</div>
+	</form>
+</div>
