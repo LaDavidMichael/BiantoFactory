@@ -7,25 +7,23 @@ error_reporting(0);
 
 <div class="container" style="margin-top:20px">
 	<center>
-		<font size="6">Data Produk</font>
+		<font size="6">Misi</font>
 	</center>
 	<hr>
-	<a href="dashboard.php?page=tambahproduk"><button class="btn btn-dark right">Tambah Data</button></a>
+	<a href="dashboard.php?page=tambahmisi"><button class="btn btn-dark right">Tambah Data</button></a>
 	<div class="table-responsive">
 		<table class="table table-striped jambo_table bulk_action">
 			<thead>
 				<tr>
 					<th>No</th>
-					<th>Foto Produk</th>
-					<th>Judul</th>
-					<th>Deskripsi</th>
+					<th>Misi</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
 				//query ke database SELECT tabel artikel urut berdasarkan id yang paling besar
-				$sql = mysqli_query($koneksidb, "SELECT * FROM produk ORDER BY id DESC") or die(mysqli_error($koneksidb));
+				$sql = mysqli_query($koneksidb, "SELECT * FROM misi ORDER BY id DESC") or die(mysqli_error($koneksidb));
 				//jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
 				if (mysqli_num_rows($sql) > 0) {
 					//membuat variabel $no untuk menyimpan nomor urut
@@ -36,12 +34,10 @@ error_reporting(0);
 						echo '
 						<tr>
 							<td>' . $no . '</td>
-							<td><img src="assets/images/'.$data['fotoproduk'].'" height="120"></td>
-							<td>' . $data['judul'] . '</td>
-							<td>' . $data['deskripsi'] . '</td>
+							<td>' . $data['misi'] . '</td>
 							<td>
-								<a href="dashboard.php?page=editproduk&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Edit</a>
-								<a href="crutproduk/delete.php?id='.$data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="dashboard.php?page=editmisi&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="CRUD-Misi/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
 							</td>
 						</tr>
 						';

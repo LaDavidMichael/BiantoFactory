@@ -17,7 +17,7 @@ error_reporting(0);
 			$id = $_GET['id'];
 
 			//query ke database SELECT tabel artikel berdasarkan id = $id
-			$select = mysqli_query($koneksidb, "SELECT * FROM produk WHERE id='$id'") or die(mysqli_error($koneksidb));
+			$select = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 			//jika hasil query = 0 maka muncul pesan error
 			if(mysqli_num_rows($select) == 0){
@@ -38,56 +38,50 @@ error_reporting(0);
 			$id = $_POST['id'];
 
 			//query ke database SELECT tabel artikel berdasarkan id = $id
-			$query = mysqli_query($koneksidb, "SELECT * FROM produk WHERE id='$id'") or die(mysqli_error($koneksidb));
+			$query = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 			// ini untuk "fetch" data dari db gais
 			// jadi bisa diambil pake arah panah (->)
 			$data = mysqli_fetch_object($query);
-			$path = getcwd()."/assets/images/".$data->fotoproduk;
+			$path = getcwd()."/assets/images/".$data->gambar;
 
 			unlink($path); // ini proses delete file nya gais
 
 			$target_dir = "assets/images/";
-			$target_file = $target_dir . basename($_FILES["fotoproduk"]["name"]);
+			$target_file = $target_dir . basename($_FILES["gambar"]["name"]);
 
 			/**
 			 * ini untuk upload filenya gais
 			 */
-			$upload = move_uploaded_file($_FILES["fotoproduk"]["tmp_name"], $target_file);
+			$upload = move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file);
 
 			/**
 			 * jika file nya gagal di upload gas, maka dia berhenti gais
 			 * dengan perintah die() itu gais
 			 */
 			if (!$upload) {
-				print_r([$upload, $_FILES["fotoproduk"]["error"]]);
+				print_r([$upload, $_FILES["gambar"]["error"]]);
 
 				die();
 			}
-			$fotoproduk		= $_FILES['fotoproduk']["name"];
-			$judul	= $_POST['judul'];
-			$deskripsi    = $_POST['deskripsi'];
+			$judul		= $_POST['judul'];
+			$deskripsi	= $_POST['deskripsi'];
+			$gambar	    = $_FILES['gambar']["name"];
 
-			$sql = mysqli_query($koneksidb, "UPDATE produk SET fotoproduk='$fotoproduk', judul='$judul', deskripsi='$deskripsi' WHERE id='$id'") or die(mysqli_error($koneksidb));
+			$sql = mysqli_query($koneksidb, "UPDATE artikel SET judul='$judul', deskripsi='$deskripsi', gambar='$gambar' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 			if($sql){
-				echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilproduk";</script>';
+				echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampildata";</script>';
 			}else{
 				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 			}
 		}
 
-		
+
 		?>
 
-		<form action="dashboard.php?page=editproduk&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+		<form action="dashboard.php?page=editartikel&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-            <div class="item form-group">
-				<label class="col-form-label col-md-3 col-sm-3 label-align">Foto Produk</label>
-				<div class="col-md-6 col-sm-6">
-					<input type="file" name="fotoproduk" class="form-control" value="<?php echo $data['fotoproduk']; ?>" required>
-				</div>
-			</div>
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
 				<div class="col-md-6 col-sm-6">
@@ -102,9 +96,15 @@ error_reporting(0);
 				</div>
 			</div>
 			<div class="item form-group">
+				<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
+				<div class="col-md-6 col-sm-6">
+					<input type="file" name="gambar" class="form-control" value="<?php echo $data['gambar']; ?>" required>
+				</div>
+			</div>
+			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
 					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="dashboard.php?page=tampilproduk" class="btn btn-warning">Kembali</a>
+					<a href="dashboard.php?page=tampildata" class="btn btn-warning">Kembali</a>
 				</div>
 			</div>
 		</form>
