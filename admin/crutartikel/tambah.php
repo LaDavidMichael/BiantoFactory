@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="file" name="fotosampul" class="form-control" required>
+			<input type="file" name="gambar" class="form-control" required>
 		</div>
 	</div>
 
