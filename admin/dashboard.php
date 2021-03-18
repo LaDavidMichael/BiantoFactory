@@ -39,24 +39,16 @@ if (strlen($_SESSION['alogin']) == 0) {
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
+            <div class="navbar nav_title" style="border: 0;" style="padding: 25px;">
             <center>
-            &nbsp; <a href="dashboard.php" class="fa fa-home fa-2x" style="color:#fff;"><span><font size="4.95" color="white" face="Helvetica Neue"> CV BIANTO FACTORY</font></span></a>
+            &nbsp; <a href="dashboard.php"  style="margin-left: 10px;"><img src="../assets/images/produkbiantofix3.png" height="40" width="40"  alt=""><span><font size="4" color="white" face="arial">    Halaman Admin</font></span></a>
             </center>
             </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="assets/images/logo.png" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Selamat Datang,</span>
-                <h2>Robianto</h2>
-              </div>
-            </div>
+            
             <!-- /menu profile quick info -->
 
             <br />
@@ -65,13 +57,13 @@ if (strlen($_SESSION['alogin']) == 0) {
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.php"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a>
+                <li class=""><a href="dashboard.php?"><i class="fa fa-home" aria-hidden="true"></i> Dashboard <span class="fa fa-chevron"></span></a>
                   </li>
-                  <li><a href="dashboard.php?page=tampildata"><i class="fa fa-paperclip" aria-hidden="true"></i> Data Artikel <span class="fa fa-chevron"></span></a>
+                  <li class=""><a href="dashboard.php?page=tampildata"><i class="fa fa-paperclip" aria-hidden="true"></i> Data Artikel <span class="fa fa-chevron"></span></a>
                   </li>
-                  <li><a href="dashboard.php?page=tampilproduk"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Data Produk <span class="fa fa-chevron"></span></a>
+                  <li class=""><a href="dashboard.php?page=tampilproduk"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Data Produk <span class="fa fa-chevron"></span></a>
                   </li>
-                  <li><a href="dashboard.php?page=tampiltesti"><i class="fa fa-picture-o"></i> Data Testimoni <span class="fa fa-chevron"></span></a>
+                  <li class=""><a href="dashboard.php?page=tampiltesti"><i class="fa fa-picture-o"></i> Data Testimoni <span class="fa fa-chevron"></span></a>
                   </li>
                 </ul>
               </div>
@@ -91,15 +83,10 @@ if (strlen($_SESSION['alogin']) == 0) {
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" >
                   <a href="#" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="assets/images/logo.png" alt="">Robianto
+                    <img src="assets/images/logo.png" alt="">Admin
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="#"> Profile</a>
-                      <a class="dropdown-item"  href="#">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    <a class="dropdown-item"  href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="../admin/"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>
