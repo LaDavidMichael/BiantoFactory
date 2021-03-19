@@ -63,7 +63,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                   <li class="">
                     <a href="dashboard.php?">
-                      <i class="fa fa-home" aria-hidden="true"></i> Dashboard
+                      <i class="fa fa-home" aria-hidden="true"></i> Beranda
                       <span class="fa fa-chevron"></span>
                     </a>
                   </li>
@@ -93,7 +93,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                   <li class="">
                     <a href="dashboard.php?page=tampilprofil">
-                      <i class="fa fa-address-card" aria-hidden="true"></i> Profil
+                      <i class="fa fa-id-card-o" aria-hidden="true"></i> Profil
                       <span class="fa fa-chevron"></span>
                     </a>
                   </li>

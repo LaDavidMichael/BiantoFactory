@@ -10,7 +10,7 @@ error_reporting(0);
 		<font size="6">Visi</font>
 	</center>
 	<hr>
-	<a href="dashboard.php?page=tambahmisi"><button class="btn btn-dark right">Tambah Data</button></a>
+	<a href="dashboard.php?page=tambahvisi"><button class="btn btn-dark right">Tambah Data</button></a>
 	<div class="table-responsive">
 		<table class="table table-striped jambo_table bulk_action">
 			<thead>
@@ -37,7 +37,7 @@ error_reporting(0);
 							<td>' . $data['visi'] . '</td>
 							<td>
 								<a href="dashboard.php?page=editvisi&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Edit</a>
-								<a href="CRUD-Misi/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="CRUD-Visi/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
 							</td>
 						</tr>
 						';

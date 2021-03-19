@@ -11,31 +11,14 @@ error_reporting(0);
 <?php
 if (isset($_POST['submit'])) {
 
-	$target_dir = "assets/images/";
-	$target_file = $target_dir . basename($_FILES["gambar"]["name"]);
 
-	/**
-	 * ini untuk upload filenya gais
-	 */
-	$upload = move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file);
-
-	/**
-	 * jika file nya gagal di upload gas, maka dia berhenti gais
-	 * dengan perintah die() itu gais
-	 */
-	if (!$upload) {
-		print_r([$upload, $_FILES["gambar"]["error"]]);
-
-		die();
-	}
-
-	$id			= $_POST['id'];
+	$id		= $_POST['id'];
 	$visi	= $_POST['visi'];
 
 	$cek = mysqli_query($koneksidb, "SELECT * FROM visi WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO visi(id, visi) VALUES('$id', '$visi')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO visi (id, visi) VALUES('$id', '$visi')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilvisi";</script>';
@@ -53,7 +36,7 @@ if (isset($_POST['submit'])) {
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Visi</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="misi" class="form-control" required>
+			<input type="text" name="visi" class="form-control" required>
 		</div>
 	</div>
 

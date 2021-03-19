@@ -19,7 +19,7 @@ error_reporting(0);
 		$id = $_GET['id'];
 
 		//query ke database SELECT tabel artikel berdasarkan id = $id
-		$select = mysqli_query($koneksidb, "SELECT * FROM vis WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$select = mysqli_query($koneksidb, "SELECT * FROM visi WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		//jika hasil query = 0 maka muncul pesan error
 		if (mysqli_num_rows($select) == 0) {
@@ -52,7 +52,7 @@ error_reporting(0);
 
 		$visi	= $_POST['visi'];
 
-		$sql = mysqli_query($koneksidb, "UPDATE visi SET misi='$visi' WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "UPDATE visi SET visi ='$visi' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilvisi";</script>';
@@ -70,7 +70,7 @@ error_reporting(0);
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">visi</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="misi" class="form-control" value="<?php echo $data['visi']; ?>" required>
+				<input type="text" name="visi" class="form-control" value="<?php echo $data['visi']; ?>" required>
 			</div>
 		</div>
 
