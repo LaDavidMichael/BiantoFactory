@@ -19,7 +19,7 @@ error_reporting(0);
 		$id = $_GET['id'];
 
 		//query ke database SELECT tabel artikel berdasarkan id = $id
-		$select = mysqli_query($koneksidb, "SELECT * FROM misi WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$select = mysqli_query($koneksidb, "SELECT * FROM contact WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		//jika hasil query = 0 maka muncul pesan error
 		if (mysqli_num_rows($select) == 0) {
@@ -40,7 +40,7 @@ error_reporting(0);
 		$id = $_POST['id'];
 
 		//query ke database SELECT tabel artikel berdasarkan id = $id
-		$query = mysqli_query($koneksidb, "SELECT * FROM misi WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$query = mysqli_query($koneksidb, "SELECT * FROM contact WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		// ini untuk "fetch" data dari db gais
 		// jadi bisa diambil pake arah panah (->)
@@ -50,12 +50,15 @@ error_reporting(0);
 		unlink($path); // ini proses delete file nya gais
 
 
-		$misi	= $_POST['misi'];
+		$alamat	= $_POST['alamat'];
+		$tlpn	= $_POST['tlpn'];
+		$email	= $_POST['email'];
 
-		$sql = mysqli_query($koneksidb, "UPDATE misi SET misi='$misi' WHERE id='$id'") or die(mysqli_error($koneksidb));
+
+		$sql = mysqli_query($koneksidb, "UPDATE contact SET alamat ='$alamat', tlpn='$tlpn', email='$email' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
-			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilmisi";</script>';
+			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilkontak";</script>';
 		} else {
 			echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 		}
@@ -64,13 +67,29 @@ error_reporting(0);
 
 	?>
 
-	<form action="dashboard.php?page=editmisi&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+	<form action="dashboard.php?page=editkontak&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
 
+
 		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">Misi</label>
+			<label class="col-form-label col-md-3 col-sm-3 label-align">No.Tlpn</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="misi" class="form-control" value="<?php echo $data['misi']; ?>" required>
+				<input type="text" name="tlpn" class="form-control" value="<?php echo $data['tlpn']; ?>" required>
+			</div>
+		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+			<div class="col-md-6 col-sm-6">
+				<input type="email" name="email" class="form-control" value="<?php echo $data['email']; ?>" required>
+			</div>
+		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Alamat</label>
+			<div class="col-md-6 col-sm-6">
+				<!-- <input type="text" name="alamat" class="form-control" value="<?php echo $data['alamat']; ?>" required> -->
+				<textarea name="alamat" class="form-control"> <?php echo $data['alamat']; ?> </textarea>
 			</div>
 		</div>
 
@@ -78,7 +97,7 @@ error_reporting(0);
 		<div class="item form-group">
 			<div class="col-md-6 col-sm-6 offset-md-3">
 				<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-				<a href="dashboard.php?page=tampilmisi" class="btn btn-warning">Kembali</a>
+				<a href="dashboard.php?page=tampilkontak" class="btn btn-outline-secondary">Kembali</a>
 			</div>
 		</div>
 	</form>

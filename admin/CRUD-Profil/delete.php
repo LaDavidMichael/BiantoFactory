@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
 	$id = $_GET['id'];
 
 	//melakukan query ke database, dengan cara SELECT data yang memiliki id yang sama dengan variabel $id
-	$cek = mysqli_query($koneksidb, "SELECT * FROM profil WHERE id='$id'") or die(mysqli_error($koneksidb));
+	$cek = mysqli_query($koneksidb, "SELECT * FROM profile WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	// ini untuk "fetch" data dari db gais
 	// jadi bisa diambil pake arah panah (->)
@@ -21,7 +21,7 @@ if(isset($_GET['id'])){
 	//jika query menghasilkan nilai > 0 maka eksekusi script di bawah
 	if(mysqli_num_rows($cek) > 0){
 		//query ke database DELETE untuk menghapus data dengan kondisi id=$id
-		$del = mysqli_query($koneksidb, "DELETE FROM testi WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$del = mysqli_query($koneksidb, "DELETE FROM profile WHERE id='$id'") or die(mysqli_error($koneksidb));
 		if($del){
 			echo '<script>alert("Berhasil menghapus data."); document.location="../dashboard.php?page=tampilprofil";</script>';
 		}else{

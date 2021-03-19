@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
 	$cek = mysqli_query($koneksidb, "SELECT * FROM artikel WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO artikel(id, tanggal, judul, deskripsi, gambar) 
-		VALUES('$id', '$tanggal' ,'$judul', '$deskripsi' , '$gambar')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO artikel (id, tanggal, judul, deskripsi, gambar) 
+		VALUES('$id', '$tanggal', '$judul', '$deskripsi', '$gambar')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilartikel";</script>';
@@ -86,6 +86,7 @@ if (isset($_POST['submit'])) {
 	<div class="item form-group">
 		<div class="col-md-6 col-sm-6 offset-md-3">
 			<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
+			<a href="dashboard.php?page=tampilartikel" class="btn btn-outline-secondary">Kembali</a>
 		</div>
 </form>
 </div>

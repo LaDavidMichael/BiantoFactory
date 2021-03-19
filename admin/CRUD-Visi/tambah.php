@@ -43,6 +43,7 @@ if (isset($_POST['submit'])) {
 	<div class="item form-group">
 		<div class="col-md-6 col-sm-6 offset-md-3">
 			<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
+			<a href="dashboard.php?page=tampilvisi" class="btn btn-outline-secondary">Kembali</a>
 		</div>
 		
 </form>
