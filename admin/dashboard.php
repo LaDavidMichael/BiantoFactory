@@ -93,7 +93,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                   <li class="">
                     <a href="dashboard.php?page=tampilprofil">
-                      <i class="fa fa-id-card-o" aria-hidden="true"></i> Profil
+                      <i class="fa fa-user" aria-hidden="true"></i> Profil
                       <span class="fa fa-chevron"></span>
                     </a>
                   </li>

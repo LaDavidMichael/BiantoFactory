@@ -30,15 +30,16 @@ if (isset($_POST['submit'])) {
 	}
 
 	$id			= $_POST['id'];
-	$misi		= $_POST['misi'];
+	$gambar		= $_FILES['fotosampul']["name"];
+	$deskripsi	= $_POST['deskripsi'];
 
-	$cek = mysqli_query($koneksidb, "SELECT * FROM misi WHERE id='$id'") or die(mysqli_error($koneksidb));
+	$cek = mysqli_query($koneksidb, "SELECT * FROM profile WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO misi(id, misi) VALUES('$id', '$misi')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO profile(id, gambar, deskripsi) VALUES('$id', '$gambar', '$deskripsi')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
-			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilmisi";</script>';
+			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilgambar";</script>';
 		} else {
 			echo '<div class="alert alert-warning">Gagal melakukan proses tambah data.</div>';
 		}
@@ -49,11 +50,18 @@ if (isset($_POST['submit'])) {
 ?>
 
 <form action="dashboard.php?page=tambahmisi" method="post" enctype="multipart/form-data">
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="file" name="gambar" class="form-control" required>
+		</div>
+	</div>
 
 	<div class="item form-group">
-		<label class="col-form-label col-md-3 col-sm-3 label-align">Misi</label>
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="misi" class="form-control" required>
+			<!-- <input type="text" name="deskripsi" class="form-control" required> -->
+			<textarea name="deskripsi" class="form-control"></textarea>
 		</div>
 	</div>
 
