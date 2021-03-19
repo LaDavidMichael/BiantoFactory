@@ -5,40 +5,44 @@ error_reporting(0);
 ?>
 
 <center>
-	<font size="6">Tambah Data</font>
+	<font size="6">Tambah Tim</font>
 </center>
 <hr>
 <?php
 if (isset($_POST['submit'])) {
 
 	$target_dir = "assets/images/";
-	$target_file = $target_dir . basename($_FILES["gambar"]["name"]);
+	$target_file = $target_dir . basename($_FILES["foto"]["name"]);
 
 	/**
 	 * ini untuk upload filenya gais
 	 */
-	$upload = move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file);
+	$upload = move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
 
 	/**
 	 * jika file nya gagal di upload gas, maka dia berhenti gais
 	 * dengan perintah die() itu gais
 	 */
 	if (!$upload) {
-		print_r([$upload, $_FILES["gambar"]["error"]]);
+		print_r([$upload, $_FILES["foto"]["error"]]);
 
 		die();
 	}
 
 	$id			= $_POST['id'];
-	$misi		= $_POST['misi'];
+	$nama		= $_POST['nama'];
+	$jabatan   	= $_POST['jabatan'];
+	$deskripsi 	= $_POST['deskripsi'];
+	$foto		= $_FILES["foto"]["name"]; // ini cara mengambil nama filenya gais untuk dimasukan ke db gais
 
-	$cek = mysqli_query($koneksidb, "SELECT * FROM misi WHERE id='$id'") or die(mysqli_error($koneksidb));
+	$cek = mysqli_query($koneksidb, "SELECT * FROM team WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO misi(id, misi) VALUES('$id', '$misi')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO team(id, nama, jabatan, deskripsi, foto) VALUES('$id', '$nama', '$jabatan', '$deskripsi', '$foto')") 
+		or die(mysqli_error($koneksidb));
 
 		if ($sql) {
-			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilmisi";</script>';
+			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampiltim";</script>';
 		} else {
 			echo '<div class="alert alert-warning">Gagal melakukan proses tambah data.</div>';
 		}
@@ -48,12 +52,31 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<form action="dashboard.php?page=tambahmisi" method="post" enctype="multipart/form-data">
+<form action="dashboard.php?page=tambahtim" method="post" enctype="multipart/form-data">
 
 	<div class="item form-group">
-		<label class="col-form-label col-md-3 col-sm-3 label-align">Misi</label>
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="misi" class="form-control" required>
+			<input type="text" name="nama" class="form-control" required>
+		</div>
+	</div>
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Jabatan</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="text" name="jabatan" class="form-control" required>
+		</div>
+	</div>
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
+		<div class="col-md-6 col-sm-6">
+			<!-- <input type="text" name="deskripsi" class="form-control" required> -->
+			<textarea name="deskripsi" class="form-control"></textarea>
+		</div>
+	</div>
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="file" name="foto" class="form-control" required>
 		</div>
 	</div>
 
