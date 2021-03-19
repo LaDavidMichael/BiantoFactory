@@ -104,6 +104,7 @@ if (mysqli_num_rows($query1) > 0) {
 
                         });
                     </script>
+
                     <div class="sliderAx h-auto -mt-10">
                         <div id="slider-1" class="container mx-auto">
                             <div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill" style="background-image: url(assets/images/banner1.jpg)">
@@ -126,11 +127,14 @@ if (mysqli_num_rows($query1) > 0) {
                             </div> <!-- container -->
                             <br>
                         </div>
+
                     </div>
+
                     <div class="flex justify-between w-12 mx-auto pb-2">
                         <button id="sButton1" onclick="sliderButton1()" class="bg-teal-600 rounded-full w-4 pb-2 "></button>
                         <button id="sButton2" onclick="sliderButton2() " class="bg-teal-600 rounded-full w-4 p-2"></button>
                     </div>
+
                     <div class="lg:w-4/6 mx-auto">
 
                         <div class="flex flex-col sm:flex-row mt-10">
@@ -145,6 +149,7 @@ if (mysqli_num_rows($query1) > 0) {
                                     <p class="text-base">"Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland."</p>
                                 </div>
                             </div>
+
                             <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                                 <p class="leading-relaxed text-lg md:w-2/2 mb-4"><?php echo htmlentities($result['deskripsi']); ?></p>
                                 <a class="text-indigo-500 inline-flex items-center">Learn More
@@ -153,9 +158,19 @@ if (mysqli_num_rows($query1) > 0) {
                                     </svg>
                                 </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
+
+                <center>
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/I9dt0wuHSA4">
+                    </iframe>
+                </center>
+
+
+
+
             </section>
             <!-- /Profile -->
 

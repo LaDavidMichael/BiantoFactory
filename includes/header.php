@@ -4,9 +4,9 @@
       <img src="assets/images/logobianto.png" alt="" />
     </a>
     <nav class="md:mr-auto md:ml-8 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-      <a class="mr-10 ml-5 navbar-brand js-scroll-trigger hover:text-teal-600" href="index.php">Beranda</a>
-      <a class="mr-10 navbar-brand js-scroll-trigger hover:text-teal-600" href="tentangkami.php">Tentang Kami</a>
-      <a class="navbar-brand js-scroll-trigger hover:text-teal-600" href="contact.php">Kontak Kami</a>
+      <a class="mr-5 ml-5 navbar-brand js-scroll-trigger hover:text-teal-600" href="index.php">Beranda</a>
+      <a class="mr-5 navbar-brand js-scroll-trigger hover:text-teal-600" href="tentangkami.php">Tentang Kami</a>
+      <a class="mr-5 navbar-brand js-scroll-trigger hover:text-teal-600" href="contact.php">Kontak Kami</a>
     </nav>
     
 
