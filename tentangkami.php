@@ -163,6 +163,10 @@ if (mysqli_num_rows($query1) > 0) {
                     </div>
                 </div>
 
+                <!-- VisiMisi -->
+                <?php include('visimisi.php'); ?>
+                <!-- /VisiMisi -->
+
                 <center>
                     <iframe width="600" height="400" src="https://www.youtube.com/embed/I9dt0wuHSA4">
                     </iframe>
