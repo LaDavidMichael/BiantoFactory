@@ -40,8 +40,8 @@ error_reporting(0);
 							<td>' . $data['email'] . '</td>
 							<td>' . $data['alamat'] . '</td>
 							<td>
-								<a href="dashboard.php?page=editkontak&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Edit</a>
-								<a href="CRUD-Kontak/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="dashboard.php?page=editkontak&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Ubah</a>
+								<a href="CRUD-Kontak/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Hapus</a>
 							</td>
 						</tr>
 						';
