@@ -156,6 +156,10 @@ if (strlen($_SESSION['alogin']) == 0) {
           parse_str($_SERVER['QUERY_STRING'], $queries);
           error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
           switch ($queries['page']) {
+              // Beranda
+            case 'tampilberanda':
+              include 'Beranda/tampil.php';
+              break;
 
               // CRUD-Artikel
             case 'tampilartikel':

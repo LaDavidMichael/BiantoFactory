@@ -17,7 +17,7 @@ if (mysqli_num_rows($query1) > 0) {
                 </div>
                 <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
                     <div class="lg:w-1/4 md:w-1/2 w-full px-20">
-                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><a href="artikel.php">BLOG </a> </h2>
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 hover:text-teal-600"><a href="artikel.php">BLOG </a> </h2>
 
                         <nav class="list-none mb-10">
                         </nav>
