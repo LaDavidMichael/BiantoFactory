@@ -64,17 +64,23 @@ error_reporting(0);
                         <img src="assets/images/client4.png" alt="">
                     </div>
                 </div>
-                        <!-- /Client -->
-                        <!-- Content -->
-                        <?php include('content.php');?>
-                        <!-- /Content -->
+            </div>
+        </div>
+    </section>
+    <!-- /Client -->
 
-                        <!-- Produk -->
-                        <?php include('team.php');?>
-                        <!-- /Produk -->
+    
+    <!-- Content -->
+    <?php include('content.php'); ?>
+    <!-- /Content -->
 
-                        <!-- Footer -->
-                        <?php include('includes/footer.php');?>
-                        <!-- /Footer -->
+    <!-- Produk -->
+    <?php include('team.php'); ?>
+    <!-- /Produk -->
+
+    <!-- Footer -->
+    <?php include('includes/footer.php'); ?>
+    <!-- /Footer -->
 </body>
+
 </html>
