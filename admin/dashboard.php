@@ -151,6 +151,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!-- page content - HALAMAN UTAMA ISI DISINI -->
         <div class="right_col" role="main">
+        <center>
+		      <font size="6">Selamat Datang Admin !</font>
+	        </center>
           <?php
           $queries = array();
           parse_str($_SERVER['QUERY_STRING'], $queries);

@@ -41,13 +41,13 @@ error_reporting(0);
                             </div>
                             <div class="md:flex-grow">
                             <h2 class="text-2xl font-medium text-gray-900 title-font mb-2"><?= $data['judul'] ?></h2>
-                            <p class="leading-relaxed"><?= $data['deskripsi'] ?></p>
-                            <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
+                            <p class="lg:w-1/2 md:w-1/2 w-full leading-relaxed mt-5 "><?= $data['deskripsi'] ?></p>
+                                <a href="https://www.youtube.com/channel/UCjyQars8F1AA-1LV8w8O2kw" class="text-indigo-500 inline-flex items-center mt-4">Learn More
+                                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
