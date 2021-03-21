@@ -34,7 +34,7 @@ if (strlen($_SESSION['alogin']) == 0) {
               </div>
               <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                <a class="text-indigo-500 leading-relaxed"> <?php echo htmlentities($result['email']); ?> </a>
+                <a class="text-teal-200 leading-relaxed"> <?php echo htmlentities($result['email']); ?> </a>
                 <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
                 <p class="leading-relaxed"> <?php echo htmlentities($result['tlpn']); ?> </p>
               </div>

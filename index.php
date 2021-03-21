@@ -40,7 +40,7 @@ error_reporting(0);
     <!-- /Banner -->
     <!-- /Client -->
     <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+        <div class="container px-4,9 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-20">
                 <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">PELANGGAN KAMI</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Kami telah banyak mengerjakan alat pemanas untuk berbagai perusahaan ternama, dan mereka puas dengan hasil yang kami berikan. Berikut adalah brand perusahaan yang telah bekerjasama dengan kami.</p>
@@ -56,24 +56,24 @@ error_reporting(0);
                     <img src="assets/images/client3.png" alt="">
                 </div>
                 <div class="flex flex-wrap justify-center">
-                    <div class="xl:w-1/5 mr-10 ml-10 md:w-1/2 p-3">
+                    <div class="xl:w-1/4 mr-10 ml-10 md:w-1/2 p-3">
                         <img src="assets/images/client5.png" alt="">
                     </div>
-                    <div class="xl:w-1/5 mr-10 ml-10 md:w-1/2 p-3">
+                    <div class="xl:w-1/4 mr-10 ml-10 md:w-1/2 p-3">
                         <img src="assets/images/client4.png" alt="">
                     </div>
                 </div>
-                <!-- /Client -->
-                <!-- Content -->
-                <?php include('content.php'); ?>
-                <!-- /Content -->
+                        <!-- /Client -->
+                        <!-- Content -->
+                        <?php include('content.php');?>
+                        <!-- /Content -->
 
-                <!-- Produk -->
-                <?php include('team.php'); ?>
-                <!-- /Produk -->
+                        <!-- Produk -->
+                        <?php include('team.php');?>
+                        <!-- /Produk -->
 
-                <!-- Footer -->
-                <?php include('includes/footer.php'); ?>
-                <!-- /Footer -->
+                        <!-- Footer -->
+                        <?php include('includes/footer.php');?>
+                        <!-- /Footer -->
 </body>
 </html>

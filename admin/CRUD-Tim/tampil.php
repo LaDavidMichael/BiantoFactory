@@ -42,8 +42,8 @@ error_reporting(0);
 							<td>' . $data['deskripsi'] . '</td>
 							<td><img src="assets/images/'.$data['foto'].'" height="120"></td>
 							<td>
-								<a href="dashboard.php?page=edittim&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Edit</a>
-								<a href="CRUD-Tim/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="dashboard.php?page=edittim&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Ubah</a>
+								<a href="CRUD-Tim/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Hapus</a>
 							</td>
 						</tr>
 						';
