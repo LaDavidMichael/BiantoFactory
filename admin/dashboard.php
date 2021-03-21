@@ -249,7 +249,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Copyright @ 2020 CV Bianto Factory
+            Copyright @ 2021 CV Bianto Factory
           </div>
           <div class="clearfix"></div>
         </footer>

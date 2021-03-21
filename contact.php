@@ -2,9 +2,6 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-if (strlen($_SESSION['alogin']) == 0) {
-  header('location:index.php');
-} else {
 ?>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
@@ -83,5 +80,4 @@ if (strlen($_SESSION['alogin']) == 0) {
   <!-- /Footer -->
 
 
-<?php }
-?>
+

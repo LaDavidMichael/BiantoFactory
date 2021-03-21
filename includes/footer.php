@@ -10,20 +10,10 @@
             </div>
             <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ARTIKEL</h2>
+
+            <a  class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 mr-5 navbar-brand js-scroll-trigger hover:text-teal-600" href="artikel.php"> ARTIKEL</a>
             <nav class="list-none mb-10">
-            <?php
-                    //$pagetype = $_GET['type'];
-                    $sql = "SELECT * from artikel";
-                    $query1 = mysqli_query($koneksidb, $sql);
-                    if (mysqli_num_rows($query1) > 0) {
-                        while ($result = mysqli_fetch_array($query1)) {
-                    ?>
-                <li>
-                    <a class="text-gray-600 hover:text-gray-800"><?php echo htmlentities($result['judul']); ?></a>
-                </li>
-                <?php }
-    } ?>
+           
                   
                 </nav>
             </div>
