@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Mar 2021 pada 23.53
+-- Waktu pembuatan: 21 Mar 2021 pada 11.41
 -- Versi server: 10.3.15-MariaDB
 -- Versi PHP: 7.3.6
 
@@ -88,6 +88,20 @@ INSERT INTO `contact` (`id`, `alamat`, `tlpn`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `hp` varchar(13) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pesan` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `misi`
 --
 
@@ -127,6 +141,28 @@ INSERT INTO `profile` (`id`, `gambar`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `sosialmedia`
+--
+
+CREATE TABLE `sosialmedia` (
+  `id` int(11) NOT NULL,
+  `instagram` varchar(255) NOT NULL,
+  `facebook` varchar(255) NOT NULL,
+  `twitter` varchar(255) NOT NULL,
+  `linkedin` varchar(255) NOT NULL,
+  `youtube` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `sosialmedia`
+--
+
+INSERT INTO `sosialmedia` (`id`, `instagram`, `facebook`, `twitter`, `linkedin`, `youtube`) VALUES
+(1, 'https://www.instagram.com/', 'https://id-id.facebook.com/', 'https://twitter.com/', 'https://id.linkedin.com/', 'https://www.youtube.com/');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `team`
 --
 
@@ -145,10 +181,10 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `facebook`) VALUES
-(8, 'Ahmad', 'CEO', 'pingin haji', 0x5349444520424152204b454d454a412e6a7067, '', ''),
-(9, 'david', 'CFO', 'SUKSES', 0x5349444520424152204a45525345592e6a7067, '', ''),
-(10, 'SONI', 'manager', 'semangat terus', 0x6b656d656a61206b616d7075732e6a7067, '', ''),
-(11, 'bagus', 'tukang', 'gas', 0x534944452042415220534f5556454e4952204b41524552542e6a7067, '', '');
+(8, 'David Michael', 'General Manager', 'selalu ingin menjadi yang terbaik', 0x69636f6e642e706e67, '', ''),
+(9, 'M. Soni Rejeki', 'MARKETING', ' Selalu memberikan yang terbaik ', 0x69636f6e632e706e67, '', ''),
+(10, 'Bagus Kurniawan', 'CFO', 'Memberikan yang terbaik untuk bangsa', 0x69636f6e622e706e67, '', ''),
+(13, 'Ahmad Muhammad', 'CEO', 'Ingin selalu berkarya', 0x69636f6e612e706e67, '', '');
 
 -- --------------------------------------------------------
 
@@ -170,10 +206,10 @@ CREATE TABLE `testi` (
 --
 
 INSERT INTO `testi` (`id`, `fotosampul`, `kota`, `provinsi`, `judul`, `deskripsi`) VALUES
-(8, 'IND.jpg', 'pbr', 'pbr', 'pbr', 'jksahdjkashdkas'),
-(9, 'GANTENG.jpg', 'surabaya', 'jawatimur', 'nyoba', 'kjaskdjaskd'),
-(11, 'angel.jpg', 'malang', 'madura', 'malang', 'madura'),
-(13, 'workhard.jpg', 'surabaya', 'jawatimur', 'masok', ' hkjkljkljlk ');
+(9, 'orangc.png', 'Jakarta', 'DKI Jakarta', 'Mitsubishi Motors Corporation', 'Barang bagus dan juga terpercaya'),
+(11, 'orangb.png', 'Sidoarjo', 'Jawa Timur', 'PT. Avia Avian', 'Thanks CV. Avia Avian,\r\nBagus dan Awet'),
+(13, 'orang.png', 'Surabaya', 'Jawa Timur', 'PT. AM Desain Corp', 'Terpercaya, mesinnya bagus, Sukses terus CV Bianto Factory, next pasti order lagi'),
+(14, 'oranga.png', 'Bandung', 'Jawa Bandung', 'PT Astra Honda Motor (AHM)', 'Puas dengan pemanasnya, terima kasih untuk CV. Bianto Factory');
 
 -- --------------------------------------------------------
 
@@ -217,6 +253,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `misi`
 --
 ALTER TABLE `misi`
@@ -226,6 +268,12 @@ ALTER TABLE `misi`
 -- Indeks untuk tabel `profile`
 --
 ALTER TABLE `profile`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `sosialmedia`
+--
+ALTER TABLE `sosialmedia`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -284,13 +332,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT untuk tabel `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `testi`
 --
 ALTER TABLE `testi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `visi`
