@@ -39,7 +39,8 @@ error_reporting(0);
         </div>
     </section>
     <!-- /Banner -->
-    <!-- /Client -->
+
+    <!-- Client -->
     <section class="text-gray-600 body-font">
         <div class="container px-4,9 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-20">
@@ -69,7 +70,7 @@ error_reporting(0);
     </section>
     <!-- /Client -->
 
-    
+
     <!-- Content -->
     <?php include('content.php'); ?>
     <!-- /Content -->

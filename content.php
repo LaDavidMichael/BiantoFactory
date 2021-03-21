@@ -11,23 +11,23 @@
         </div>
         <div class="flex flex-wrap -m-4">
 
-        <?php
+            <?php
             $sql = mysqli_query($koneksidb, "SELECT * FROM testi ORDER BY id DESC") or die(mysqli_error($koneksidb));
-            
-            while ($data = mysqli_fetch_assoc($sql)) {
-        ?>
 
-            <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="admin/assets/images/<?= $data['fotosampul'] ?>" alt="content">
-                    <h3 class="tracking-widest text-teal-500 text-xs font-medium title-font"><?= "{$data['kota']}, {$data['provinsi']}" ?></h3>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><?= $data['judul'] ?></h2>
-                    <p class="leading-relaxed text-base">"<?= $data['deskripsi'] ?>"</p>
+            while ($data = mysqli_fetch_assoc($sql)) {
+            ?>
+
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="admin/assets/images/<?= $data['fotosampul'] ?>" alt="content">
+                        <h3 class="tracking-widest text-teal-500 text-xs font-medium title-font"><?= "{$data['kota']}, {$data['provinsi']}" ?></h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><?= $data['judul'] ?></h2>
+                        <p class="leading-relaxed text-base">"<?= $data['deskripsi'] ?>"</p>
+                    </div>
                 </div>
-            </div>
-        <?php
+            <?php
             }
-        ?>
+            ?>
 
         </div>
     </div>
