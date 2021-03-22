@@ -4,7 +4,7 @@
     <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap w-full mb-20">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Review Pelanggan Kami</h1>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Ulasan Pelanggan Kami</h1>
                 <div class="h-1 w-20 bg-teal-500 rounded"></div>
             </div>
             <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Kami selalu ingin memberikan pelayanan yang memuaskan untuk para pelanggan kami, komitmen kami Menjaga kualitas dan kepercayaan konsumen, agar mampu membuat alat pemanas yang sesuai dengan yang dibutuhkan oleh konsumen.</p>
