@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Mar 2021 pada 11.41
+-- Waktu pembuatan: 22 Mar 2021 pada 01.23
 -- Versi server: 10.3.15-MariaDB
 -- Versi PHP: 7.3.6
 
@@ -62,8 +62,9 @@ CREATE TABLE `artikel` (
 
 INSERT INTO `artikel` (`id`, `tanggal`, `judul`, `deskripsi`, `gambar`) VALUES
 (4, '2021-03-02', 'Pemanas Air', '  Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..  ', 0x622e706e67),
-(15, '2021-03-20', 'Produk CV Bianto Factory ke 3`', 'terbaik', 0x732e706e67),
-(16, '2021-03-20', 'Produk CV Bianto Factory ke 6', 'keren', 0x612e706e67);
+(47, '2021-03-22', 'NoxxleHeater', 'Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..', 0x4e6f78786c654865617465722e6a7067),
+(48, '2021-03-22', 'BandHeater', 'Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..', 0x42616e644865617465722e6a7067),
+(49, '2021-03-22', 'ImmersionHeater', 'Sebelum kita membahas contoh dari Teks Deskripsi ada baiknya kita mengetahui terlebih dahulu pengertian Teks Deskripsi. Lalu apa itu Teks Deskripsi ? teks deskripsi adalah sebuah karangan yang gagasan pokoknya disampaikan dengan jelas, baik itu tempat atau kejadian yang menjadi topik utama kepada seorang pembaca. Setelah kita mengetahui Pengertiannya barulah kita membahas beberapa Contoh Teks Deskripsi di bawah ini.', 0x496d6d657273696f6e4865617465722e6a7067);
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,7 @@ INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `
 (8, 'David Michael', 'General Manager', 'selalu ingin menjadi yang terbaik', 0x69636f6e642e706e67, '', ''),
 (9, 'M. Soni Rejeki', 'MARKETING', ' Selalu memberikan yang terbaik ', 0x69636f6e632e706e67, '', ''),
 (10, 'Bagus Kurniawan', 'CFO', 'Memberikan yang terbaik untuk bangsa', 0x69636f6e622e706e67, '', ''),
-(13, 'Ahmad Muhammad', 'CEO', 'Ingin selalu berkarya', 0x69636f6e612e706e67, '', '');
+(15, 'Ahmad Muhammad', 'CEO', 'Ingin selalu menjadikan yang terbaik', 0x69636f6e612e706e67, '', '');
 
 -- --------------------------------------------------------
 
@@ -308,7 +309,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT untuk tabel `contact`
@@ -332,7 +333,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT untuk tabel `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `testi`
