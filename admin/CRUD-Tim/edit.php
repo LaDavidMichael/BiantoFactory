@@ -7,7 +7,7 @@ error_reporting(0);
 
 <div class="container" style="margin-top:20px">
 	<center>
-		<font size="6">Edit Data</font>
+		<font size="6">Ubah Data</font>
 	</center>
 
 	<hr>
@@ -78,7 +78,7 @@ error_reporting(0);
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampiltim";</script>';
 		} else {
-			echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
+			echo '<div class="alert alert-warning">Gagal melakukan proses.</div>';
 		}
 	}
 
