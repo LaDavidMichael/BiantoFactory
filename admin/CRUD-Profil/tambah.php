@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 		$sql = mysqli_query($koneksidb, "INSERT INTO profile(id, gambar, deskripsi) VALUES('$id', '$gambar', '$deskripsi')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
-			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilgambar";</script>';
+			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilprofil";</script>';
 		} else {
 			echo '<div class="alert alert-warning">Gagal melakukan proses tambah data.</div>';
 		}
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<form action="dashboard.php?page=tambahmisi" method="post" enctype="multipart/form-data">
+<form action="dashboard.php?page=tambahprofil" method="post" enctype="multipart/form-data">
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
 		<div class="col-md-6 col-sm-6">

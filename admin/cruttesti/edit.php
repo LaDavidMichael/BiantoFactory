@@ -73,7 +73,8 @@ error_reporting(0);
 		$judul			= $_POST['judul'];
 		$deskripsi      = $_POST['deskripsi'];
 
-		$sql = mysqli_query($koneksidb, "UPDATE testi SET fotosampul='$fotosampul', kota='$kota', provinsi='$provinsi', judul='$judul', deskripsi='$deskripsi' WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "UPDATE testi SET fotosampul = '$fotosampul', kota = '$kota', provinsi = '$provinsi', judul = '$judul', deskripsi = '$deskripsi' WHERE id='$id'")
+		or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampiltesti";</script>';
@@ -84,8 +85,10 @@ error_reporting(0);
 
 
 	?>
+	
 	<form action="dashboard.php?page=edittesti&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Foto Sampul</label>
 			<div class="col-md-6 col-sm-6">
@@ -93,24 +96,28 @@ error_reporting(0);
 				<input type="file" name="fotosampul" class="form-control">
 			</div>
 		</div>
+
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Kota</label>
 			<div class="col-md-6 col-sm-6">
 				<input type="text" name="kota" class="form-control" value="<?php echo $data['kota']; ?>" required>
 			</div>
 		</div>
+		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Provinsi</label>
 			<div class="col-md-6 col-sm-6">
 				<input type="text" name="provinsi" class="form-control" value="<?php echo $data['provinsi']; ?>" required>
 			</div>
 		</div>
+		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
 			<div class="col-md-6 col-sm-6">
 				<input type="text" name="judul" class="form-control" value="<?php echo $data['judul']; ?>" required>
 			</div>
 		</div>
+		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 			<div class="col-md-6 col-sm-6">

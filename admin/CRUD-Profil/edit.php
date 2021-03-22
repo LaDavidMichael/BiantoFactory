@@ -7,7 +7,7 @@ error_reporting(0);
 
 <div class="container" style="margin-top:20px">
 	<center>
-		<font size="6">Edit Data</font>
+		<font size="6">Ubah Data</font>
 	</center>
 
 	<hr>
@@ -63,14 +63,15 @@ error_reporting(0);
 		 * dengan perintah die() itu gais
 		 */
 		if (!$upload) {
-			print_r([$upload, $_FILES["fotosampul"]["error"]]);
+			print_r([$upload, $_FILES["gambar"]["error"]]);
 
 			die();
 		}
-		$gambar		= $_FILES['gambar']["name"];
-		$deskripsi			= $_POST['deskripsi'];
 
-		$sql = mysqli_query($koneksidb, "UPDATE profile SET gambar='$gambar', deskripsi='$deskripsi' WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$deskripsi      = $_POST['deskripsi'];
+		$gambar			= $_FILES['gambar']["name"];
+
+		$sql = mysqli_query($koneksidb, "UPDATE profile SET deskripsi='$deskripsi', gambar='$gambar' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilprofil";</script>';
@@ -83,17 +84,21 @@ error_reporting(0);
 	?>
 	<form action="dashboard.php?page=editprofil&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">gambar</label>
-			<div class="col-md-6 col-sm-6">
-				<img src="assets/images/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-				<input type="file" name="gambar" class="form-control">
-			</div>
+
+		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 			<div class="col-md-6 col-sm-6">
 				<!-- <input type="text" name="deskripsi" class="form-control"  required> -->
 				<textarea name="deskripsi" class="form-control"> <?php echo $data['deskripsi']; ?> </textarea>
+			</div>
+		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar </label>
+			<div class="col-md-6 col-sm-6">
+				<img src="assets/images/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+				<input type="file" name="gambar" class="form-control">
 			</div>
 		</div>
 
