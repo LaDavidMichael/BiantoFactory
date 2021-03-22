@@ -64,9 +64,10 @@ error_reporting(0);
 
         .addReadMore .readMore,
         .addReadMore .readLess {
+            font-family: century gothic;
             font-weight: bold;
             margin-left: 2px;
-            color: blue;
+            color: teal;
             cursor: pointer;
         }
 
@@ -98,7 +99,7 @@ error_reporting(0);
 
                                 while ($data = mysqli_fetch_assoc($sql)) {
                                 ?>
-                                    <div class="py-8 flex flex-wrap md:flex-nowrap">
+                                    <div class="py-8 flex inline-flex-wrap md:flex-nowrap">
                                         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                                             <img class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="admin/assets/images/artikel/<?= $data['gambar'] ?>" alt="content">
                                             <span class="mt-1 text-gray-500 text-sm "><?= "{$data['tanggal']}" ?></span>
