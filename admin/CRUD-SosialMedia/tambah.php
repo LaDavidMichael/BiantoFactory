@@ -40,35 +40,35 @@ if (isset($_POST['submit'])) {
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Instagram</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="instagram" class="form-control">
+			<input type="url" name="instagram" class="form-control">
 		</div>
 	</div>
 
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Facebook</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="facebook" class="form-control">
+			<input type="url" name="facebook" class="form-control">
 		</div>
 	</div>
 	
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Twitter</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="twitter" class="form-control">
+			<input type="url" name="twitter" class="form-control">
 		</div>
 	</div>
 
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Linkedin</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="linkedin" class="form-control">
+			<input type="url" name="linkedin" class="form-control">
 		</div>
 	</div>
 
 	<div class="item form-group">
 		<label class="col-form-label col-md-3 col-sm-3 label-align">YouTube</label>
 		<div class="col-md-6 col-sm-6">
-			<input type="text" name="youtube" class="form-control">
+			<input type="url" name="youtube" class="form-control">
 		</div>
 	</div>
 

@@ -67,35 +67,35 @@ error_reporting(0);
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Instagram</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="instagram" class="form-control" value="<?php echo $data['instagram']; ?>" required>
+				<input type="url" name="instagram" class="form-control" value="<?php echo $data['instagram']; ?>" required>
 			</div>
 		</div>
 		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Facebook</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="facebook" class="form-control" value="<?php echo $data['facebook']; ?>" required>
+				<input type="url" name="facebook" class="form-control" value="<?php echo $data['facebook']; ?>" required>
 			</div>
 		</div>
 
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">twitter</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="twitter" class="form-control" value="<?php echo $data['twitter']; ?>" required>
+				<input type="url" name="twitter" class="form-control" value="<?php echo $data['twitter']; ?>" required>
 			</div>
 		</div>
 
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Linkedin</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="linkedin" class="form-control" value="<?php echo $data['linkedin']; ?>" required>
+				<input type="url" name="linkedin" class="form-control" value="<?php echo $data['linkedin']; ?>" required>
 			</div>
 		</div>
 
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Youtube</label>
 			<div class="col-md-6 col-sm-6">
-				<input type="text" name="youtube" class="form-control" value="<?php echo $data['youtube']; ?>" required>
+				<input type="url" name="youtube" class="form-control" value="<?php echo $data['youtube']; ?>" required>
 			</div>
 		</div>
 
