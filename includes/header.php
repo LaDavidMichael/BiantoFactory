@@ -22,11 +22,11 @@
     <!-- /Searchbar -->
 
     <!-- Button Buy -->
-    <a href="https://shop.biantofactory.com/" target="_blank">
-    <button class="inline-flex items-center text-white bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-800 rounded text-base mt-4 md:mt-0 ">Pesan Produk
-    <img class="ml-2" src="assets/images/troly.png" width="20px">
-    </button>
+      <a href="https:shop.biantofactory.com/" target="new_tab" class="inline-flex items-center text-white bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-800 rounded text-base mt-4 md:mt-0 ">Pesan Produk
+      <img class="ml-2" src="assets/images/troly.png" width="20px">
+      </a>
     <!-- /Button Buy -->
-
+    
+    </div>
   </div>
 </header>

@@ -22,9 +22,9 @@ error_reporting(0);
             //This limit you can set after how much characters you want to show Read More.
             var carLmt = 280;
             // Text to show when text is collapsed
-            var readMoreTxt = " ... Read Mre";
+            var readMoreTxt = " ... Baca Selengkapnya";
             // Text to show when text is expanded
-            var readLessTxt = " Read Less";
+            var readLessTxt = " Baca Lebih Singkat";
 
 
             //Traverse all selectors with this class and manupulate HTML part to show Read More
