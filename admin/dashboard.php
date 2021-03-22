@@ -113,6 +113,20 @@ if (strlen($_SESSION['alogin']) == 0) {
                   </li>
 
                   <li class="">
+                    <a href="dashboard.php?page=">
+                      <i class="fa fa-link" aria-hidden="true"></i> Sosial Media
+                      <span class="fa fa-chevron"></span>
+                    </a>
+                  </li>
+
+                  <li class="">
+                    <a href="dashboard.php?page=">
+                      <i class="fa fa-envelope-open-o"></i> Pesan
+                      <span class="fa fa-chevron"></span>
+                    </a>
+                  </li>
+
+                  <li class="">
                     <a href="dashboard.php?page=tampiltesti">
                       <i class="fa fa-comments-o"></i> Testimoni
                       <span class="fa fa-chevron"></span>
