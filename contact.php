@@ -5,8 +5,6 @@ include('includes/config.php');
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,14 +81,14 @@ include('includes/config.php');
               <!-- <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p> -->
             </div>
 
-            </form>
+        </form>
 
-          </div>
-        
+        </div>
+
     <?php }
     } ?>
   </section>
-
+  
   <!-- Footer -->
   <?php include('includes/footer.php'); ?>
   <!-- /Footer -->
