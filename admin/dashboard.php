@@ -154,7 +154,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <img src="assets/images/logo.png" alt="">Admin
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="includes/logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item" href="includes/logout.php"><i class="fa fa-sign-out pull-right"></i> Keluar</a>
                   </div>
                 </li>
               </ul>
@@ -165,9 +165,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!-- page content - HALAMAN UTAMA ISI DISINI -->
         <div class="right_col" role="main">
-          <center>
-            <font size="6">Selamat Datang Admin !</font>
-          </center>
           <?php
           $queries = array();
           parse_str($_SERVER['QUERY_STRING'], $queries);
