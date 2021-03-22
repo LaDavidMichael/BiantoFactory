@@ -70,4 +70,3 @@ if (strlen($_SESSION['alogin']) == 0) {
 </div>
 <?php } ?>
 
-<script src="assetsjs/main.js"></script>
