@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 		<div class="col-md-6 col-sm-6">
 			<!-- <input type="text" name="deskripsi" class="form-control" required> -->
-			<textarea name="deskripsi" class="form-control"></textarea>
+			<textarea name="deskripsi" class="form-control" required></textarea>
 		</div>
 	</div>
 	<div class="item form-group">

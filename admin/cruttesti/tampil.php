@@ -7,7 +7,7 @@ error_reporting(0);
 
 <div class="container" style="margin-top:20px">
 	<center>
-		<font size="6">Data Testimoni</font>
+		<font size="6">Testimoni</font>
 	</center>
 	<hr>
 	<a href="dashboard.php?page=tambahtesti"><button class="btn btn-dark right">Tambah Data</button></a>
