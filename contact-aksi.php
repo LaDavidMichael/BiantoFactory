@@ -12,7 +12,7 @@ $sql 	= "INSERT INTO feedback ( nama, hp, email, pesan)
 $query 	= mysqli_query($koneksidb,$sql);
 if($query){
 	echo "<script type='text/javascript'>
-			alert('Berhasil kirim pesan.'); 
+			alert('Berhasil kirim pesan, Terimakasih.'); 
 			document.location = 'contact.php'; 
 		</script>";
 }else {

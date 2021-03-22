@@ -34,6 +34,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<th>Email</th>
 					<th>Pesan</th>
 					<th>Status</th>
+					<th>Aksi</th>
 				</tr>
 			</thead>
 
@@ -54,8 +55,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 						<td><?php echo htmlentities($result['pesan']); ?></td>
 							<?php if ($result['status'] == 1) { ?>
 						<td>Sudah Dibaca</td><?php } else { ?>
-						<td><a href="dashboard.php?page=tampilpesan&id=<?php echo htmlentities($result['id']); ?>" onclick="return confirm('Tandai sudah dibaca?')">Baca</a></td>
+						<td>
+							<a href="dashboard.php?page=tampilpesan&id=<?php echo htmlentities($result['id']); ?>" onclick="return confirm('Tandai sudah dibaca?')">Baca</a>
+						</td>
 						<?php } ?>
+						<td><a href="CRUD-Pesan/delete.php?id=<?php echo htmlentities($result['id']); ?>" onclick="return confirm('Apakah anda akan menghapus?');"><i class="fa fa-close"></i></a></td>
+						
+						
 					</tr>
 						<?php 
 							} 
