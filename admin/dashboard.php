@@ -165,9 +165,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!-- page content - HALAMAN UTAMA ISI DISINI -->
         <div class="right_col" role="main">
-        <center>
-		      <font size="6">Selamat Datang Admin !</font>
-	        </center>
+          <center>
+            <font size="6">Selamat Datang Admin !</font>
+          </center>
           <?php
           $queries = array();
           parse_str($_SERVER['QUERY_STRING'], $queries);
@@ -253,6 +253,28 @@ if (strlen($_SESSION['alogin']) == 0) {
               break;
             case 'edittesti':
               include 'cruttesti/edit.php';
+              break;
+
+              // CRUD-Pesan
+            case 'tampilpesan':
+              include 'CRUD-Pesan/tampil.php';
+              break;
+            case 'tambahpesan':
+              include 'CRUD-Pesan/tambah.php';
+              break;
+            case 'editpesan':
+              include 'CRUD-Pesan/edit.php';
+              break;
+
+              // CRUD-SosialMedia
+            case 'tampilsosialmedia':
+              include 'CRUD-SosialMedia/tampil.php';
+              break;
+            case 'tambahsosialmedia':
+              include 'CRUD-SosialMedia/tambah.php';
+              break;
+            case 'editsosialmedia':
+              include 'CRUD-SosialMedia/edit.php';
               break;
 
             default:
