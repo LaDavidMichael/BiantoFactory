@@ -42,13 +42,13 @@ include('includes/config.php');
               <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" src="https://maps.google.com/maps?q=-7.3369023,112.7634185&hl=es&z=14&amp;output=embed" marginheight="0" marginwidth="0" scrolling="no" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
               <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
                 <div class="lg:w-1/2 px-6">
-                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Alamat</h2>
                   <p class="mt-1"> <?php echo htmlentities($result['alamat']); ?> </p>
                 </div>
                 <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Email</h2>
                   <a class="text-teal-200 leading-relaxed"> <?php echo htmlentities($result['email']); ?> </a>
-                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                  <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">No.Telpn</h2>
                   <p class="leading-relaxed"> <?php echo htmlentities($result['tlpn']); ?> </p>
                 </div>
               </div>
