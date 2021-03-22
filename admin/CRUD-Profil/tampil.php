@@ -35,11 +35,11 @@ error_reporting(0);
 						echo '
 						<tr>
 							<td>' . $no . '</td>
-							<td><img src="assets/images/'.$data['gambar'].'" height="120"></td>
+							<td><img src="assets/images/' . $data['gambar'] . '" height="120"></td>
 							<td>' . $data['deskripsi'] . '</td>
 							<td>
 								<a href="dashboard.php?page=editprofil&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Ubah</a>
-								<a href="CRUD-Pofil/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Hapus</a>
+								<a href="CRUD-Profil/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Hapus</a>
 							</td>
 						</tr>
 						';
