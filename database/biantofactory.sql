@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2021 at 04:21 PM
+-- Generation Time: Mar 22, 2021 at 06:43 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -180,10 +180,10 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `facebook`) VALUES
-(8, 'David Michael', 'General Manager', 'selalu ingin menjadi yang terbaik', 0x69636f6e642e706e67, '', ''),
-(9, 'M. Soni Rejeki', 'MARKETING', ' Selalu memberikan yang terbaik ', 0x69636f6e632e706e67, '', ''),
-(10, 'Bagus Kurniawan', 'CFO', 'Memberikan yang terbaik untuk bangsa', 0x69636f6e622e706e67, '', ''),
-(15, 'Ahmad Muhammad', 'CEO', 'Ingin selalu menjadikan yang terbaik', 0x69636f6e612e706e67, '', '');
+(8, 'Teguh', 'Manager Operasional', '\" Kamu jauh lebih kuat dari ketakutanmu \"', 0x63726577342e706e67, '', ''),
+(9, 'Suyanto', 'Planning & Production Operator', '\" Nilaimu tidak berkurang berdasarkan ketidakmampuan seseorang untuk melihat nilaimu \"', 0x63726577312e706e67, '', ''),
+(10, 'Suwito', 'General Mechanic', '\" Kedewasaan bukan dilihat dari usia, melainkan dengan tindakan dan tingkah laku \"', 0x63726577322e706e67, '', ''),
+(15, 'Hariyo', 'Production Operator', '\" Sulit bukan berarti tidak mungkin \"', 0x63726577332e706e67, '', '');
 
 -- --------------------------------------------------------
 

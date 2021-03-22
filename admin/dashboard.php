@@ -121,7 +121,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                   <li class="">
                     <a href="dashboard.php?page=tampilpesan">
-                      <i class="fa fa-envelope"></i> Pesan
+                      <i class="fa fa-envelope"aria-hidden="true"></i> Pesan
                       <span class="fa fa-chevron"></span>
                     </a>
                   </li>
