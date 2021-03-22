@@ -113,14 +113,14 @@ if (strlen($_SESSION['alogin']) == 0) {
                   </li>
 
                   <li class="">
-                    <a href="dashboard.php?page=">
+                    <a href="dashboard.php?page=tampilsosialmedia">
                       <i class="fa fa-link" aria-hidden="true"></i> Sosial Media
                       <span class="fa fa-chevron"></span>
                     </a>
                   </li>
 
                   <li class="">
-                    <a href="dashboard.php?page=">
+                    <a href="dashboard.php?page=tampilpesan">
                       <i class="fa fa-envelope-open-o"></i> Pesan
                       <span class="fa fa-chevron"></span>
                     </a>
