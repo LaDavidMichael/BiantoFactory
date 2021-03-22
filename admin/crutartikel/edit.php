@@ -79,7 +79,7 @@ error_reporting(0);
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilartikel";</script>';
 		} else {
-			echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
+			echo '<div class="alert alert-warning">Gagal melakukan proses.</div>';
 		}
 	}
 
@@ -92,7 +92,7 @@ error_reporting(0);
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar</label>
 			<div class="col-md-6 col-sm-6">
 				<img src="assets/images/artikel/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-				<input type="file" name="gambar" class="form-control">
+				<input type="file" name="gambar" class="form-control" required>
 			</div>
 		</div>
 
@@ -114,7 +114,7 @@ error_reporting(0);
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 			<div class="col-md-6 col-sm-6">
 				<!-- <input type="text" name="deskripsi" class="form-control"  required> -->
-				<textarea name="deskripsi" class="form-control"> <?php echo $data['deskripsi']; ?> </textarea>
+				<textarea name="deskripsi" class="form-control" required> <?php echo $data['deskripsi']; ?> </textarea>
 			</div>
 		</div>
 

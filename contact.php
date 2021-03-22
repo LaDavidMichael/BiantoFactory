@@ -37,13 +37,17 @@ if (mysqli_num_rows($query1) > 0) {
       <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
 
         <div class="lg:w 3/6 md:w-2/4 bg-gray-300 rounded-lg overflow-hidden sm:mr-8 p-8 flex items-end justify-start relative">
-          <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" src="https://maps.google.com/maps?q=-7.3369023,112.7634185&hl=es&z=14&amp;output=embed" 
+          <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.1512790863917!2d112.76341851477532!3d-7.336902294705242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb6537b8ef8d%3A0x918ec9a03167c4e5!2sBIANTO%20FACTORY%20%7C%7C%20Jual%20ELEMEN%20PEMANAS!5e0!3m2!1sid!2sid!4v1616426909214!5m2!1sid!2sid" 
           marginheight="0" marginwidth="0" scrolling="no" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+          
           <div class="bg-white relative flex flex-wrap py-2 rounded shadow-md">
+            
             <div class="lg:w-1/2 px-6">
               <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Alamat</h2>
               <p class="mt-1"> <?php echo htmlentities($result['alamat']); ?> </p>
+              <br>
             </div>
+            
             <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Email</h2>
               <a class="text-teal-200 leading-relaxed"> <?php echo htmlentities($result['email']); ?> </a>
@@ -70,7 +74,7 @@ if (mysqli_num_rows($query1) > 0) {
 
           <div class="relative mb-4">
             <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-            <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
           </div>
 
           <div class="relative mb-4">

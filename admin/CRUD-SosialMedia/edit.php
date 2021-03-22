@@ -55,7 +55,7 @@ error_reporting(0);
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilsosialmedia";</script>';
 		} else {
-			echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
+			echo '<div class="alert alert-warning">Gagal melakukan proses.</div>';
 		}
 	}
 

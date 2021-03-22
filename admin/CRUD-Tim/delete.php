@@ -14,7 +14,7 @@ if(isset($_GET['id'])){
 	// ini untuk "fetch" data dari db gais
 	// jadi bisa diambil pake arah panah (->)
 	$data = mysqli_fetch_object($cek);
-	$path = getcwd()."/../assets/images/".$data->fotosampul;
+	$path = getcwd()."/../assets/images/".$data->foto;
 
 	unlink($path); // ini proses delete file nya gais
 
