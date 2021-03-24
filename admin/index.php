@@ -28,6 +28,7 @@ if (isset($_POST['login'])) {
 
 	<title>CV Bianto Factory | Admin Login</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+	<link rel="icon" href="assets/images/logo.png" type="image/ico" />
 </head>
 
 <body>
