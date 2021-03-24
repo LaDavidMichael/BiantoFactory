@@ -16,7 +16,7 @@ error_reporting(0);
 			<thead>
 				<tr>
 					<th>No</th>
-					<th>Foto Sampul</th>
+					<th>Foto</th>
 					<th>Kota</th>
 					<th>Provinsi</th>
 					<th>Judul</th>

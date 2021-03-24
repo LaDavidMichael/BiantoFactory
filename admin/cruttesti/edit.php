@@ -90,7 +90,7 @@ error_reporting(0);
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
 		
 		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">Foto Sampul</label>
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
 			<div class="col-md-6 col-sm-6">
 				<img src="assets/images/<?php echo $data['fotosampul']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
 				<input type="file" name="fotosampul" class="form-control "required>

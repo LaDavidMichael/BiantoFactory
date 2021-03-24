@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 
 <form action="dashboard.php?page=tambahtesti" method="post" enctype="multipart/form-data">
 	<div class="item form-group">
-		<label class="col-form-label col-md-3 col-sm-3 label-align">Foto Sampul</label>
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
 		<div class="col-md-6 col-sm-6">
 			<input type="file" name="fotosampul" class="form-control" required>
 		</div>
