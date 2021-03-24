@@ -45,12 +45,10 @@ error_reporting(0);
 
 		$instagram	= $_POST['instagram'];
 		$facebook	= $_POST['facebook'];
-		$twitter    = $_POST['twitter'];
-		$linkedin   = $_POST['linkedin'];
 		$youtube    = $_POST['youtube'];
 
 
-		$sql = mysqli_query($koneksidb, "UPDATE sosialmedia SET instagram='$instagram', facebook='$facebook', twitter='$twitter', linkedin='$linkedin', youtube='$youtube' WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "UPDATE sosialmedia SET instagram='$instagram', facebook='$facebook', youtube='$youtube' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilsosialmedia";</script>';
@@ -75,20 +73,6 @@ error_reporting(0);
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Facebook</label>
 			<div class="col-md-6 col-sm-6">
 				<input type="url" name="facebook" class="form-control" value="<?php echo $data['facebook']; ?>" required>
-			</div>
-		</div>
-
-		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">twitter</label>
-			<div class="col-md-6 col-sm-6">
-				<input type="url" name="twitter" class="form-control" value="<?php echo $data['twitter']; ?>" required>
-			</div>
-		</div>
-
-		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">Linkedin</label>
-			<div class="col-md-6 col-sm-6">
-				<input type="url" name="linkedin" class="form-control" value="<?php echo $data['linkedin']; ?>" required>
 			</div>
 		</div>
 

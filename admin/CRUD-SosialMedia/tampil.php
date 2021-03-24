@@ -18,8 +18,6 @@ error_reporting(0);
 					<th>No</th>
 					<th>Instagram</th>
 					<th>Facebook</th>
-					<th>Twitter</th>
-					<th>Linkedin</th>
 					<th>YouTube</th>
 					<th>Aksi</th>
 				</tr>
@@ -41,8 +39,6 @@ error_reporting(0);
 							<td>' . $no . '</td>
 							<td>' . $data['instagram'] . '</td>
 							<td>' . $data['facebook'] . '</td>
-							<td>' . $data['twitter'] . '</td>
-							<td>' . $data['linkedin'] . '</td>
 							<td>' . $data['youtube'] . '</td>
 							<td>
 								<a href="dashboard.php?page=editsosialmedia&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Ubah</a>
