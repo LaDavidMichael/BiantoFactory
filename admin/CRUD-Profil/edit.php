@@ -70,8 +70,11 @@ error_reporting(0);
 
 		$deskripsi      = $_POST['deskripsi'];
 		$gambar			= $_FILES['gambar']["name"];
+		$nama     = $_POST['nama'];
+		$jabatan    = $_POST['jabatan'];
+		$moto      = $_POST['moto'];
 
-		$sql = mysqli_query($koneksidb, "UPDATE profile SET deskripsi='$deskripsi', gambar='$gambar' WHERE id='$id'") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "UPDATE profile SET deskripsi='$deskripsi', gambar='$gambar', nama='$nama', jabatan='$jabatan', moto='$moto' WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menyimpan data."); document.location="dashboard.php?page=tampilprofil";</script>';
@@ -98,9 +101,32 @@ error_reporting(0);
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar </label>
 			<div class="col-md-6 col-sm-6">
 				<img src="assets/images/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-				<input type="file" name="gambar" class="form-control">
+				<input type="file" name="gambar" class="form-control" required>
 			</div>
 		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>
+			<div class="col-md-6 col-sm-6">
+				<input type="text" name="nama" class="form-control" value="<?php echo $data['nama']; ?>" required>
+			</div>
+		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Jabatan</label>
+			<div class="col-md-6 col-sm-6">
+				<input type="text" name="jabatan" class="form-control" value="<?php echo $data['jabatan']; ?>" required>
+			</div>
+		</div>
+
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Moto</label>
+			<div class="col-md-6 col-sm-6">
+				<!-- <input type="text" name="deskripsi" class="form-control"  required> -->
+				<textarea name="moto" class="form-control" required> <?php echo $data['moto']; ?> </textarea>
+			</div>
+		</div>
+
 
 		<div class="item form-group">
 			<div class="col-md-6 col-sm-6 offset-md-3">

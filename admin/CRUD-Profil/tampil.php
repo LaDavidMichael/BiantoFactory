@@ -18,6 +18,9 @@ error_reporting(0);
 					<th>No</th>
 					<th>Gambar</th>
 					<th>Deskripsi</th>
+					<th>Nama</th>
+					<th>Jabatan</th>
+					<th>Moto</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
@@ -37,6 +40,9 @@ error_reporting(0);
 							<td>' . $no . '</td>
 							<td><img src="assets/images/' . $data['gambar'] . '" height="120"></td>
 							<td>' . $data['deskripsi'] . '</td>
+							<td>' . $data['nama'] . '</td>
+							<td>' . $data['jabatan'] . '</td>
+							<td>' . $data['moto'] . '</td>
 							<td>
 								<a href="dashboard.php?page=editprofil&id=' . $data['id'] . '" class="btn btn-secondary btn-sm">Ubah</a>
 								<a href="CRUD-Profil/delete.php?id=' . $data['id'] . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Hapus</a>

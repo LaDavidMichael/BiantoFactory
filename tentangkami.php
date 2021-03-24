@@ -202,10 +202,10 @@ if (mysqli_num_rows($query1) > 0) {
                         <img src="assets/images/<?php echo htmlentities($result['gambar']); ?>" alt="" />
                         </a>
                     <div class="flex flex-col items-center text-center justify-center">
-                        <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Robianto</h2>
-                        <h2 class="font-small title-font mt-1 text-gray-900 text-lg">Chief Executive Owner (CEO)</h2>
+                        <h2 class="font-medium title-font mt-4 text-gray-900 text-lg"><?php echo htmlentities($result['nama']); ?></h2>
+                        <h2 class="font-small title-font mt-1 text-gray-900 text-lg"><?php echo htmlentities($result['jabatan']); ?></h2>
                         <div class="w-12 h-1 bg-teal-500 rounded mt-2 mb-4"></div>
-                            <p class="text-base">"Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland."</p>
+                            <p class="text-base">"<?php echo htmlentities($result['moto']); ?>"</p>
                         </div>
                         </div>
                     <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">

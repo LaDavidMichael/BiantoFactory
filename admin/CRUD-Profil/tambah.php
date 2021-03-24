@@ -32,11 +32,16 @@ if (isset($_POST['submit'])) {
 	$id			= $_POST['id'];
 	$gambar		= $_FILES['fotosampul']["name"];
 	$deskripsi	= $_POST['deskripsi'];
+	$nama	= $_POST['nama'];
+	$jabatan	= $_POST['jabatan'];
+	$moto	= $_POST['moto'];
+
+	
 
 	$cek = mysqli_query($koneksidb, "SELECT * FROM profile WHERE id='$id'") or die(mysqli_error($koneksidb));
 
 	if (mysqli_num_rows($cek) == 0) {
-		$sql = mysqli_query($koneksidb, "INSERT INTO profile(id, gambar, deskripsi) VALUES('$id', '$gambar', '$deskripsi')") or die(mysqli_error($koneksidb));
+		$sql = mysqli_query($koneksidb, "INSERT INTO profile(id, gambar, deskripsi, nama, jabatan, moto) VALUES('$id', '$gambar', '$deskripsi', '$nama', '$judul', '$moto')") or die(mysqli_error($koneksidb));
 
 		if ($sql) {
 			echo '<script>alert("Berhasil menambahkan data."); document.location="dashboard.php?page=tampilprofil";</script>';
@@ -61,9 +66,31 @@ if (isset($_POST['submit'])) {
 		<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
 		<div class="col-md-6 col-sm-6">
 			<!-- <input type="text" name="deskripsi" class="form-control" required> -->
-			<textarea name="deskripsi" class="form-control"></textarea>
+			<textarea name="deskripsi" class="form-control" required></textarea>
 		</div>
 	</div>
+
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="text" name="nama" class="form-control" required>
+		</div>
+	</div>
+
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Jabatan</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="text" name="jabatan" class="form-control" required>
+		</div>
+	</div>
+
+	<div class="item form-group">
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Moto</label>
+		<div class="col-md-6 col-sm-6">
+			<input type="text" name="moto" class="form-control" required>
+		</div>
+	</div>
+
 
 	<div class="item form-group">
 		<div class="col-md-6 col-sm-6 offset-md-3">
