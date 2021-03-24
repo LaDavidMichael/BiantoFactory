@@ -57,7 +57,7 @@ if (isset($_POST['login'])) {
 					</div>
 				</div>
 
-				<div class="flex items-center justify-between">
+				<!-- <div class="flex items-center justify-between">
 					<div class="flex items-center">
 						<input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
 						<label for="remember_me" class="ml-2 block text-sm text-gray-900">
@@ -70,7 +70,7 @@ if (isset($_POST['login'])) {
 							Lupa Kata Sandi?
 						</a>
 					</div>
-				</div>
+				</div> -->
 
 				<div>
 					<button name="login" type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
