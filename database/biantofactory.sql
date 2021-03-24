@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Mar 2021 pada 16.21
--- Versi server: 10.3.15-MariaDB
--- Versi PHP: 7.3.6
+-- Waktu pembuatan: 24 Mar 2021 pada 16.44
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -97,15 +96,9 @@ CREATE TABLE `feedback` (
   `nama` varchar(255) NOT NULL,
   `hp` varchar(13) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `pesan` longtext NOT NULL
+  `pesan` longtext NOT NULL,
+  `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `feedback`
---
-
-INSERT INTO `feedback` (`id`, `nama`, `hp`, `email`, `pesan`) VALUES
-(0, 'ahmad', '086732166060', 'admin@gmail.com', 'bagus');
 
 -- --------------------------------------------------------
 
@@ -239,8 +232,7 @@ CREATE TABLE `visi` (
 
 INSERT INTO `visi` (`id`, `visi`) VALUES
 (1, 'Menjadikan perusahaan Manufaktur terkemuka'),
-(2, 'Menjadi Perusahaan Produsen Element Pemanas dan Thermocouple'),
-(4, 'kudu sip');
+(2, 'Menjadi Perusahaan Produsen Element Pemanas dan Thermocouple');
 
 --
 -- Indexes for dumped tables
