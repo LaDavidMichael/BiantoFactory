@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Mar 2021 pada 16.44
+-- Waktu pembuatan: 24 Mar 2021 pada 17.04
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -60,10 +60,10 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id`, `tanggal`, `judul`, `deskripsi`, `gambar`) VALUES
-(4, '2021-03-02', 'Pemanas Air', '  Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..  ', 0x622e706e67),
-(47, '2021-03-22', 'NoxxleHeater', 'Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..', 0x4e6f78786c654865617465722e6a7067),
-(48, '2021-03-22', 'BandHeater', ' Sebelum kita membahas contoh dari Teks Deskripsi ada baiknya kita mengetahui terlebih dahulu pengertian Teks Deskripsi. Lalu apa itu Teks Deskripsi ? teks deskripsi adalah sebuah karangan yang gagasan pokoknya disampaikan dengan jelas, baik itu tempat atau kejadian yang menjadi topik utama kepada seorang pembaca. Setelah kita mengetahui Pengertiannya barulah kita membahas beberapa Contoh Teks Deskripsi di bawah ini. ', 0x42616e644865617465722e6a7067),
-(49, '2021-03-22', 'ImmersionHeater', 'Sebelum kita membahas contoh dari Teks Deskripsi ada baiknya kita mengetahui terlebih dahulu pengertian Teks Deskripsi. Lalu apa itu Teks Deskripsi ? teks deskripsi adalah sebuah karangan yang gagasan pokoknya disampaikan dengan jelas, baik itu tempat atau kejadian yang menjadi topik utama kepada seorang pembaca. Setelah kita mengetahui Pengertiannya barulah kita membahas beberapa Contoh Teks Deskripsi di bawah ini.', 0x496d6d657273696f6e4865617465722e6a7067);
+(4, '2021-03-02', 'Water Heater', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0x622e706e67),
+(47, '2021-03-22', 'NoxxleHeater', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0x4e6f78786c654865617465722e6a7067),
+(48, '2021-03-22', 'BandHeater', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0x42616e644865617465722e6a7067),
+(49, '2021-03-22', 'ImmersionHeater', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0x496d6d657273696f6e4865617465722e6a7067);
 
 -- --------------------------------------------------------
 
@@ -185,10 +185,10 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `facebook`) VALUES
-(8, 'David Michael', 'General Manager', 'selalu ingin menjadi yang terbaik', 0x69636f6e642e706e67, '', ''),
-(9, 'M. Soni Rejeki', 'MARKETING', ' Selalu memberikan yang terbaik ', 0x69636f6e632e706e67, '', ''),
-(10, 'Bagus Kurniawan', 'CFO', 'Memberikan yang terbaik untuk bangsa', 0x69636f6e622e706e67, '', ''),
-(15, 'Ahmad Muhammad', 'CEO', 'Ingin selalu menjadikan yang terbaik', 0x69636f6e612e706e67, '', '');
+(8, 'Jonas', 'CEO', 'It\'s supposed to be automatic, but actually you have to push this button.', 0x69636f6e642e706e67, '', ''),
+(9, 'Maxine', 'CTO', 'It\'s supposed to be automatic, but actually you have to push this button.', 0x69636f6e632e706e67, '', ''),
+(10, 'Catherine', 'CFO', 'It\'s supposed to be automatic, but actually you have to push this button.', 0x69636f6e622e706e67, '', ''),
+(15, 'Demetrius', 'COO', 'It\'s supposed to be automatic, but actually you have to push this button.', 0x69636f6e612e706e67, '', '');
 
 -- --------------------------------------------------------
 
@@ -210,10 +210,10 @@ CREATE TABLE `testi` (
 --
 
 INSERT INTO `testi` (`id`, `fotosampul`, `kota`, `provinsi`, `judul`, `deskripsi`) VALUES
-(9, 'orangc.png', 'Jakarta', 'DKI Jakarta', 'Mitsubishi Motors Corporation', 'Barang bagus dan juga terpercaya'),
-(11, 'orangb.png', 'Sidoarjo', 'Jawa Timur', 'PT. Avia Avian', 'Thanks CV. Avia Avian,\r\nBagus dan Awet'),
-(13, 'orang.png', 'Surabaya', 'Jawa Timur', 'PT. AM Desain Corp', 'Terpercaya, mesinnya bagus, Sukses terus CV Bianto Factory, next pasti order lagi'),
-(14, 'oranga.png', 'Bandung', 'Jawa Bandung', 'PT Astra Honda Motor (AHM)', 'Puas dengan pemanasnya, terima kasih untuk CV. Bianto Factory');
+(9, 'orangc.png', 'Jakarta', 'DKI Jakarta', 'Eclair Inc', 'Good Product'),
+(11, 'orangb.png', 'Sidoarjo', 'Jawa Timur', 'Cupcake LLC', 'Good Product'),
+(13, 'orang.png', 'Surabaya', 'Jawa Timur', 'Cupcake LLC', 'Good Product'),
+(14, 'oranga.png', 'Bandung', 'Jawa Bandung', 'Cupcake LLC', 'Good Product');
 
 -- --------------------------------------------------------
 
