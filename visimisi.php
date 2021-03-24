@@ -13,7 +13,7 @@ error_reporting(0);
             <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Visi & Misi</h1>
             <!-- <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p> -->
         </div>
-        
+
         <!-- Visi -->
         <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
             <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
@@ -43,7 +43,6 @@ error_reporting(0);
                 </div>
             </div>
             <!-- /Visi -->
-
 
             <!-- Misi -->
             <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
