@@ -75,9 +75,9 @@ error_reporting(0);
     <?php include('content.php'); ?>
     <!-- /Content -->
 
-    <!-- Produk -->
+    <!-- Tim -->
     <?php include('team.php'); ?>
-    <!-- /Produk -->
+    <!-- /Tim -->
 
     <!-- Footer -->
     <?php include('includes/footer.php'); ?>

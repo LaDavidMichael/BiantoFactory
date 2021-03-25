@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2021 at 07:00 PM
+-- Generation Time: Mar 25, 2021 at 08:40 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -180,10 +180,17 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `facebook`) VALUES
-(8, 'Teguh', 'Manager Operasional', '\" Kamu jauh lebih kuat dari ketakutanmu \"', 0x63726577342e706e67, '', ''),
-(9, 'Suyanto', 'Planning & Production Operator', '\" Nilaimu tidak berkurang berdasarkan ketidakmampuan seseorang untuk melihat nilaimu \"', 0x63726577312e706e67, '', ''),
-(10, 'Suwito', 'General Mechanic', '\" Kedewasaan bukan dilihat dari usia, melainkan dengan tindakan dan tingkah laku \"', 0x63726577322e706e67, '', ''),
-(15, 'Hariyo', 'Production Operator', '\" Sulit bukan berarti tidak mungkin \"', 0x63726577332e706e67, '', '');
+(8, 'Robianto', 'CEO', '  \" Hidup adalah pilihan, jika kau tidak memilih, itulah pilihanmu \"  ', 0x6372657731302e706e67, '', ''),
+(9, 'Suyanto', 'Planning & Production Operator', ' \" Nilaimu tidak berkurang berdasarkan ketidakmampuan seseorang untuk melihat nilaimu \" ', 0x63726577312e706e67, '', ''),
+(10, 'Teguh', 'Manager Operasional', '  \" Kamu jauh lebih kuat dari ketakutanmu \"  ', 0x63726577342e706e67, '', ''),
+(15, 'Hariyo', 'Production Operator', ' \" Sulit bukan berarti tidak mungkin \" ', 0x63726577332e706e67, '', ''),
+(17, 'Suwito', 'General Mechanic', '\" Kedewasaan bukan dilihat dari usia, melainkan dengan tindakan dan tingkah laku \"', 0x63726577322e706e67, '', ''),
+(18, 'Slamet Budiono', 'Planning & Production', '\" Bersiaplah dalam kesunyian dan biarkan kesuksesanmu membuat kebisingan \"', 0x63726577352e706e67, '', ''),
+(19, 'M Alwi Guhardi Putra', 'Drafter', '\" Sukses adalah sebuah perjalanan bukan sebuah tujuan \"', 0x63726577362e706e67, '', ''),
+(20, 'Eko', 'General Civil Engineer', '\" Sabar itu ilmu tingkat tinggi, belajarnya setiap hari, latihannya setiap saat, ujiannya sering mendadak \"', 0x63726577372e706e67, '', ''),
+(21, 'Fanny Andrianto Irawan', 'Marketing', '\" Hidup ini seperti sepeda, agar tetap seimbang, kau harus terus bergerak \"', 0x63726577382e706e67, '', ''),
+(22, 'Musa Alfaruk', 'Marketing', '\" Sopo sing tekun bakale tekan, masio gowo teken \"', 0x63726577392e706e67, '', ''),
+(23, ' Joko', 'General Electrical', '\" Perubahan dalam segala hal adalah hal yg manis \"', 0x6372657731312e706e67, '', '');
 
 -- --------------------------------------------------------
 
@@ -331,7 +338,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `testi`
