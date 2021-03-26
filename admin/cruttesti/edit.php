@@ -93,7 +93,7 @@ error_reporting(0);
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
 			<div class="col-md-6 col-sm-6">
 				<img src="assets/images/<?php echo $data['fotosampul']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-				<input type="file" name="fotosampul" class="form-control "required>
+				<input type="file" name="fotosampul" class="form-control " required>
 			</div>
 		</div>
 
@@ -112,7 +112,7 @@ error_reporting(0);
 		</div>
 		
 		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>
 			<div class="col-md-6 col-sm-6">
 				<input type="text" name="judul" class="form-control" value="<?php echo $data['judul']; ?>" required>
 			</div>

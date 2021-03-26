@@ -88,6 +88,13 @@ error_reporting(0);
 	<form action="dashboard.php?page=editprofil&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
 
+		<div class="item form-group">
+			<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar </label>
+			<div class="col-md-6 col-sm-6">
+				<img src="assets/images/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+				<input type="file" name="gambar" class="form-control" required>
+			</div>
+		</div>
 		
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Deskripsi</label>
@@ -97,13 +104,6 @@ error_reporting(0);
 			</div>
 		</div>
 
-		<div class="item form-group">
-			<label class="col-form-label col-md-3 col-sm-3 label-align">Gambar </label>
-			<div class="col-md-6 col-sm-6">
-				<img src="assets/images/<?php echo $data['gambar']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-				<input type="file" name="gambar" class="form-control" required>
-			</div>
-		</div>
 
 		<div class="item form-group">
 			<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>

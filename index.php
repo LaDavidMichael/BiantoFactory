@@ -28,7 +28,7 @@ error_reporting(0);
                 <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-teal-900">Elemen Pemanas Spesialis
                     <br class="hidden lg:inline-block">Termokopel
                 </h1>
-                <p class="mb-8 leading-relaxed">Percayakan kebutuhan Sparepart Elektrikal, Mekanikal,Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami..</p>
+                <p class="mb-8 leading-relaxed">Percayakan kebutuhan Sparepart Elektrikal, Mekanikal, Produk HF lebih khusus di bidang Heating Elements pada kami, karena kami sudah berpengalaman di bidang tersebut. Jaminan Kualitas dan Harga menjadi kepercayaan kami.</p>
                 <!--<div class="flex justify-center">
                     <button class="inline-flex text-white bg-teal-600 border-0 py-2 px-6 focus:outline-none hover:bg-teal-800 rounded text-lg">Ketahui Selengkapnya -></button>
                 </div>-->

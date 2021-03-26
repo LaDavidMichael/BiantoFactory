@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
 	</div>
 
 	<div class="item form-group">
-		<label class="col-form-label col-md-3 col-sm-3 label-align">Judul</label>
+		<label class="col-form-label col-md-3 col-sm-3 label-align">Nama</label>
 		<div class="col-md-6 col-sm-6">
 			<input type="text" name="judul" class="form-control" required>
 		</div>

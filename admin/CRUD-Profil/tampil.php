@@ -10,7 +10,7 @@ error_reporting(0);
 		<font size="6">Profil</font>
 	</center>
 	<hr>
-	<a href="dashboard.php?page=tambahprofil"><button class="btn btn-dark right">Tambah Data</button></a>
+	<!-- <a href="dashboard.php?page=tambahprofil"><button class="btn btn-dark right">Tambah Data</button></a> -->
 	<div class="table-responsive">
 		<table class="table table-striped jambo_table bulk_action">
 			<thead>
