@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2021 at 08:45 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Waktu pembuatan: 26 Mar 2021 pada 18.08
+-- Versi server: 10.3.15-MariaDB
+-- Versi PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `updateOnDate`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `updateOnDate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artikel`
+-- Struktur dari tabel `artikel`
 --
 
 CREATE TABLE `artikel` (
@@ -57,7 +57,7 @@ CREATE TABLE `artikel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `artikel`
+-- Dumping data untuk tabel `artikel`
 --
 
 INSERT INTO `artikel` (`id`, `tanggal`, `judul`, `deskripsi`, `gambar`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `artikel` (`id`, `tanggal`, `judul`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Struktur dari tabel `contact`
 --
 
 CREATE TABLE `contact` (
@@ -80,16 +80,16 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `contact`
+-- Dumping data untuk tabel `contact`
 --
 
 INSERT INTO `contact` (`id`, `alamat`, `tlpn`, `email`) VALUES
-(1, 'Jalan Kyai Satari II/14B, Kel. Rungkut Menanggal, Kec. Gunung Anyar, Kota Surabaya ', '081357047260', 'biantofactory@gmail.com');
+(1, ' Jalan Kyai Satari II/14B, Kel. Rungkut Menanggal, Kec. Gunung Anyar, Kota Surabaya  ', '081357047260', 'contoh@gmail.com');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- Struktur dari tabel `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -97,13 +97,14 @@ CREATE TABLE `feedback` (
   `nama` varchar(255) NOT NULL,
   `hp` varchar(13) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `pesan` longtext NOT NULL
+  `pesan` longtext NOT NULL,
+  `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `misi`
+-- Struktur dari tabel `misi`
 --
 
 CREATE TABLE `misi` (
@@ -112,7 +113,7 @@ CREATE TABLE `misi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `misi`
+-- Dumping data untuk tabel `misi`
 --
 
 INSERT INTO `misi` (`id`, `misi`) VALUES
@@ -123,26 +124,29 @@ INSERT INTO `misi` (`id`, `misi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profile`
+-- Struktur dari tabel `profile`
 --
 
 CREATE TABLE `profile` (
   `id` int(11) NOT NULL,
   `gambar` blob NOT NULL,
-  `deskripsi` longtext NOT NULL
+  `deskripsi` longtext NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `jabatan` varchar(255) NOT NULL,
+  `moto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `profile`
+-- Dumping data untuk tabel `profile`
 --
 
-INSERT INTO `profile` (`id`, `gambar`, `deskripsi`) VALUES
-(1, 0x6c6f676f20362e706e67, ' CV. Bianto Factory merupakan pelopor Produsen Element Pemanas dan Thermocouple di salah satu Kota di Jawa Timur. Dengan lingkup pemasaran seluruh Indonesia. Perusahaan kami berdiri sejak tahun 1995, dengan alamat awal di Jalan Kyai Satari II/41 Surabaya. Pada tahun 2013 kami berpindah tempat, dikarenakan Sertifikat lahan yang masih belum kejelasannya.\r\nDalam perjalannya, CV. Bianto Factory telah mengalami sejumlah perubahan nama, dengan nama awal adalah CV. Tunggal Jaya Elektrik, dan pada tahun 2013 merubah namanya menjadi CV. Bianto Factory. ');
+INSERT INTO `profile` (`id`, `gambar`, `deskripsi`, `nama`, `jabatan`, `moto`) VALUES
+(0, 0x69636f6e642e706e67, '    CV. Bianto Factory merupakan pelopor Produsen Element Pemanas dan Thermocouple di salah satu Kota di Jawa Timur. Dengan lingkup pemasaran seluruh Indonesia. Perusahaan kami berdiri sejak tahun 1995, dengan alamat awal di Jalan Kyai Satari II/41 Surabaya. Pada tahun 2013 kami berpindah tempat, dikarenakan Sertifikat lahan yang masih belum kejelasannya. Dalam perjalannya, CV. Bianto Factory telah mengalami sejumlah perubahan nama, dengan nama awal adalah CV. Tunggal Jaya Elektrik, dan pada tahun 2013 merubah namanya menjadi CV. Bianto Factory.    ', 'Robianto', 'CEO', '  Hidup adalah pilihan, jika kau tidak memilih, itulah pilihanmu    ');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sosialmedia`
+-- Struktur dari tabel `sosialmedia`
 --
 
 CREATE TABLE `sosialmedia` (
@@ -153,7 +157,7 @@ CREATE TABLE `sosialmedia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `sosialmedia`
+-- Dumping data untuk tabel `sosialmedia`
 --
 
 INSERT INTO `sosialmedia` (`id`, `instagram`, `facebook`, `youtube`) VALUES
@@ -162,7 +166,7 @@ INSERT INTO `sosialmedia` (`id`, `instagram`, `facebook`, `youtube`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `team`
+-- Struktur dari tabel `team`
 --
 
 CREATE TABLE `team` (
@@ -176,7 +180,7 @@ CREATE TABLE `team` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `team`
+-- Dumping data untuk tabel `team`
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `facebook`) VALUES
@@ -195,7 +199,7 @@ INSERT INTO `team` (`id`, `nama`, `jabatan`, `deskripsi`, `foto`, `instagram`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testi`
+-- Struktur dari tabel `testi`
 --
 
 CREATE TABLE `testi` (
@@ -208,19 +212,19 @@ CREATE TABLE `testi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `testi`
+-- Dumping data untuk tabel `testi`
 --
 
 INSERT INTO `testi` (`id`, `fotosampul`, `kota`, `provinsi`, `judul`, `deskripsi`) VALUES
-(9, 'orangc.png', 'Jakarta', 'DKI Jakarta', 'Mitsubishi Motors Corporation', 'Barang bagus dan juga terpercaya'),
-(11, 'orangb.png', 'Sidoarjo', 'Jawa Timur', 'PT. Avia Avian', 'Thanks CV. Avia Avian,\r\nBagus dan Awet'),
-(13, 'orang.png', 'Surabaya', 'Jawa Timur', 'PT. AM Desain Corp', 'Terpercaya, mesinnya bagus, Sukses terus CV Bianto Factory, next pasti order lagi'),
-(14, 'oranga.png', 'Bandung', 'Jawa Bandung', 'PT Astra Honda Motor (AHM)', 'Puas dengan pemanasnya, terima kasih untuk CV. Bianto Factory');
+(9, 'city.jpg', 'Jakarta', 'DKI Jakarta', 'Cupcake ILC', ' Barang bagus dan juga terpercaya '),
+(11, 'city.jpg', 'Sidoarjo', 'Jawa Timur', 'Cupcake ILC', 'Produk terpercaya'),
+(13, 'city.jpg', 'Surabaya', 'Jawa Timur', 'Cupcake ILC', 'Pelayanan Memuaskan'),
+(14, 'city.jpg', 'Bandung', 'Jawa Bandung', 'Cupcake ILC', 'Good');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `visi`
+-- Struktur dari tabel `visi`
 --
 
 CREATE TABLE `visi` (
@@ -229,7 +233,7 @@ CREATE TABLE `visi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `visi`
+-- Dumping data untuk tabel `visi`
 --
 
 INSERT INTO `visi` (`id`, `visi`) VALUES
@@ -241,113 +245,107 @@ INSERT INTO `visi` (`id`, `visi`) VALUES
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `artikel`
+-- Indeks untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contact`
+-- Indeks untuk tabel `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `feedback`
+-- Indeks untuk tabel `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `misi`
+-- Indeks untuk tabel `misi`
 --
 ALTER TABLE `misi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `profile`
+-- Indeks untuk tabel `profile`
 --
 ALTER TABLE `profile`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sosialmedia`
+-- Indeks untuk tabel `sosialmedia`
 --
 ALTER TABLE `sosialmedia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `team`
+-- Indeks untuk tabel `team`
 --
 ALTER TABLE `team`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testi`
+-- Indeks untuk tabel `testi`
 --
 ALTER TABLE `testi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `visi`
+-- Indeks untuk tabel `visi`
 --
 ALTER TABLE `visi`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `artikel`
+-- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT untuk tabel `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `misi`
+-- AUTO_INCREMENT untuk tabel `misi`
 --
 ALTER TABLE `misi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `profile`
---
-ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `team`
+-- AUTO_INCREMENT untuk tabel `team`
 --
 ALTER TABLE `team`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `testi`
+-- AUTO_INCREMENT untuk tabel `testi`
 --
 ALTER TABLE `testi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `visi`
+-- AUTO_INCREMENT untuk tabel `visi`
 --
 ALTER TABLE `visi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
